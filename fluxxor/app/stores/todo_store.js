@@ -30,7 +30,7 @@ var TodoStore = Fluxxor.createStore({
   
   getState: function() {
     return {
-      todos: this.todos
+      list: this.todos
     };
   }
 });
