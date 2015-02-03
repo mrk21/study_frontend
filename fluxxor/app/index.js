@@ -1,6 +1,6 @@
 var React = require("react");
 var Fluxxor = require("fluxxor");
-var Application = require('./components/application');
+var Router = require("react-router");
 
 var flux = new Fluxxor.Flux(
   require('./stores'),
@@ -13,4 +13,6 @@ flux.on("dispatch", function(type, payload) {
   }
 });
 
-React.render(<Application flux={flux} />, document.getElementById("app"));
+Router.run(require('./routes'), function(Handler) {
+  React.render(<Handler flux={flux} />, document.getElementById("app"));
+});

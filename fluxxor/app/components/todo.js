@@ -3,8 +3,10 @@ var Fluxxor = require("fluxxor");
 var FluxMixin = Fluxxor.FluxMixin(React);
 var StoreWatchMixin = Fluxxor.StoreWatchMixin;
 var TodoItem = require("./todo_item");
+var Router = require("react-router");
+var Link = Router.Link;
 
-var Application = React.createClass({
+var Todo = React.createClass({
   mixins: [FluxMixin, StoreWatchMixin("TodoStore")],
   
   getInitialState: function() {
@@ -32,6 +34,7 @@ var Application = React.createClass({
           <input type="submit" value="Add Todo" />
         </form>
         <button onClick={this.clearCompletedTodos}>Clear Completed</button>
+        <Link to="info">info</Link>
       </div>
     );
   },
@@ -53,4 +56,4 @@ var Application = React.createClass({
   }
 });
 
-module.exports = Application;
+module.exports = Todo;
