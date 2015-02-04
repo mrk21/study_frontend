@@ -3,7 +3,7 @@ var template = require('./template.jade');
 
 var Foo = React.createClass({
   render: function(){
-    return template();
+    return template.a();
   }
 });
 
