@@ -20,7 +20,8 @@ gulp.task('webpack', function(){
       },
       module: {
         loaders: [
-          { test: /\.jade$/, loader: "react-jade-loader?split=true" }
+          { test: /\.jade$/, loader: "react-jade-loader?split=true" },
+          { test: /\.js$/, loader: __dirname + "/inline-react-jade-loader.js" }
         ]
       }
     }))
