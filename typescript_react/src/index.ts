@@ -1,4 +1,7 @@
-import React = require('react');
-import app = require("./app");
+///<reference path='_references.d.ts' />
+"use strict";
 
-React.render(React.createElement(app.component, null), document.getElementById('app'));
+import React = require('react/addons');
+import App = require("./app");
+
+React.render(React.jsx(`<App />`), document.getElementById('app'));
