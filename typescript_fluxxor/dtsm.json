@@ -8,5 +8,8 @@
   "path": "typings",
   "bundle": "typings/bundle.d.ts",
   "dependencies": {
+    "react/react.d.ts": {
+      "ref": "35fffaa44bff5392741b3022d805fe3563023a3d"
+    }
   }
 }
