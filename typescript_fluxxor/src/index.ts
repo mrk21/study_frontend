@@ -114,7 +114,7 @@ module AppComponent {
           <ul>
             <li><Link to="info">info</Link></li>
           </ul>
-          <RouteHandler flux={this.props.flux} />
+          <RouteHandler {...this.props} />
         </div>
       `);
     }
