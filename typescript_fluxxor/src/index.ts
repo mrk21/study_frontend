@@ -2,7 +2,7 @@
 "use strict";
 
 import React = require('react/addons');
-import ReactRouter = require('react-router');
+import Router = require('react-router');
 import TypedReact = require('typed-react');
 import Fluxxor = require("fluxxor");
 import FluxxorStore = require('fluxxor/lib/store');
@@ -105,8 +105,8 @@ module InfoComponent {
 module AppComponent {
   class Spec extends TypedReact.Component<any,any> {
     render() {
-      var Link = ReactRouter.Link;
-      var RouteHandler = ReactRouter.RouteHandler;
+      var Link = Router.Link;
+      var RouteHandler = Router.RouteHandler;
       
       return React.jsx(`
         <div>
@@ -138,8 +138,8 @@ module Flux {
   };
   
   module Routes {
-    var Route = ReactRouter.Route;
-    var DefaultRoute = ReactRouter.DefaultRoute;
+    var Route = Router.Route;
+    var DefaultRoute = Router.DefaultRoute;
     
     export var Component = React.jsx(`
       <Route handler={App} name="home" path="/">
@@ -157,7 +157,7 @@ module Flux {
     }
   });
   
-  ReactRouter.run(Routes.Component, (RouteHandler: any) => {
+  Router.run(Routes.Component, (RouteHandler: any, state: any) => {
     React.render(React.jsx(`<RouteHandler flux={flux} />`), document.getElementById("app"));
   });
 }

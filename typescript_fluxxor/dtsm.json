@@ -3,6 +3,10 @@
     {
       "url": "https://github.com/borisyankov/DefinitelyTyped.git",
       "ref": "master"
+    },
+    {
+      "url": "https://github.com/mrk21/DefinitelyTyped.git",
+      "ref": "add-react-router.d.ts"
     }
   ],
   "path": "typings",
@@ -10,6 +14,10 @@
   "dependencies": {
     "react/react.d.ts": {
       "ref": "35fffaa44bff5392741b3022d805fe3563023a3d"
+    },
+    "react-router/react-router.d.ts": {
+      "repo": "https://github.com/mrk21/DefinitelyTyped.git",
+      "ref": "d1f8f27eeaa5e99037c5afe38effdd2670d06dd6"
     }
   }
 }
