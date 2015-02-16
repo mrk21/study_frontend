@@ -87,8 +87,3 @@ declare module Fluxxor {
 declare module 'fluxxor' {
     export = Fluxxor;
 }
-
-declare module 'fluxxor/lib/store' {
-    class Store extends Fluxxor.Store {}
-    export = Store;
-}

@@ -5,7 +5,6 @@ import React = require('react/addons');
 import Router = require('react-router');
 import TypedReact = require('typed-react');
 import Fluxxor = require("fluxxor");
-import FluxxorStore = require('fluxxor/lib/store');
 
 // Store
 module ListStore {
@@ -25,7 +24,7 @@ module ListStore {
         }
     }
     
-    export class Store extends FluxxorStore {
+    export class Store extends Fluxxor.Store {
         state = new State;
         
         constructor() {
