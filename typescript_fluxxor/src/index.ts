@@ -24,27 +24,27 @@ module ListStore {
         }
     }
     
-    export class Store extends Fluxxor.Store {
-        state = new State;
+    export var Store = Fluxxor.createStore({
+        state: State,
         
-        constructor() {
-            super();
+        initialize: function() {
+            this.state = new State;
             this.bindActions(
                 "list:add", this.onAdd.bind(this),
                 "list:clear", this.onClear.bind(this)
             );
-        }
+        },
         
-        onAdd(value: ValueType) {
+        onAdd: function(value: ValueType) {
             this.state.list.push(value);
             this.emit("change");
-        }
+        },
         
-        onClear() {
+        onClear: function() {
             this.state.list = [];
             this.emit("change");
         }
-    }
+    });
 }
 
 // Component
@@ -53,11 +53,11 @@ module ListComponent {
         list: ListStore.State;
         
         constructor(flux: Fluxxor.Flux) {
-            this.list = flux.store<ListStore.Store>('list').state;
+            this.list = flux.store('list').state;
         }
     }
     
-    class Spec extends TypedReact.Component<any, State> implements Fluxxor.Mixin.Flux, Fluxxor.Mixin.StoreWatch<State> {
+    class Spec extends TypedReact.Component<any, State> implements Fluxxor.FluxMixin, Fluxxor.StoreWatchMixin<State> {
         getFlux: () => Fluxxor.Flux;
         
         getStateFromFlux() {
