@@ -1,5 +1,9 @@
+@import "compass";
+
 $blue: #3bbfce;
 $margin: 16px; 
+$bottomColor: #3b5998;
+$topColor: lighten($bottomColor, 10%);
 
 .content-navigation {
   border-color: $blue;
@@ -10,4 +14,5 @@ $margin: 16px;
   padding: $margin / 2;
   margin: $margin / 2;
   border-color: $blue;
+  @include background-image(linear-gradient(top, $topColor, $bottomColor));
 }
