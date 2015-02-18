@@ -11,7 +11,7 @@
   "dependencies": {
     "dtsm": "^0.4.1",
     "envify": "^1.2.1",
-    "fluxxor": "git://github.com/mrk21/fluxxor.git#export_store",
+    "fluxxor": "^1.5.2",
     "gulp": "^3.8.10",
     "gulp-watch": "^4.1.0",
     "gulp-webpack": "^1.2.0",
