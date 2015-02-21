@@ -1,0 +1,20 @@
+{
+  "name": "mocha_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-espower": "^0.10.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-webpack": "^1.2.0",
+    "jsdom": "^3.1.0",
+    "mocha": "^2.1.0",
+    "power-assert": "^0.10.2"
+  }
+}
