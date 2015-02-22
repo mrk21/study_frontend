@@ -5,3 +5,4 @@ typings/
 .sass-cache/
 vendor/
 Gemfile.lock
+bower_components/
