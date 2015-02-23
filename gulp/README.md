@@ -1,9 +1,9 @@
-# gulp.js test
+# gulp test
 
 ## Running this project
 
 1. Run `npm install` command
-1. Run `./glup.sh`
+1. Run `./gulp` command
 
 ## Memo
 
