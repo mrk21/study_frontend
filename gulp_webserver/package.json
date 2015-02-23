@@ -1,0 +1,17 @@
+{
+  "name": "gulp_connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-stylus": "^2.0.1",
+    "gulp-webserver": "^0.9.0",
+    "proxy-middleware": "^0.11.0"
+  }
+}
