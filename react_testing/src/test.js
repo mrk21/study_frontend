@@ -1,12 +1,9 @@
 var React = require('react');
 var Hello = require('./component');
-var jsdom = require('jsdom').jsdom;
 require('react/addons');
 require('react-test-utils');
 
-global.document = jsdom('<html><body></body></html>');
-global.window = document.parentWindow;
-global.navigator = window.navigator;
+require('./init_dom');
 
 var node = React.addons.TestUtils.renderIntoDocument(React.createElement(Hello));
 

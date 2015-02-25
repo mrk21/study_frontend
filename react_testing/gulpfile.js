@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var webpack = require('gulp-webpack');
+var gulp_webpack = require('gulp-webpack');
+var webpack = require('webpack');
 var exec = require('gulp-exec');
 
 var jsx = function(){
@@ -32,9 +33,9 @@ var jsx = function(){
   return through.obj(transform, flush);
 };
 
-gulp.task('default', function(){
-  return gulp.src('src/index.js')
-    .pipe(webpack({
+gulp.task('app', function(){
+  gulp.src('src/index.js')
+    .pipe(gulp_webpack({
       output: {
         path: __dirname + '/build',
         filename: 'bundle.js'
@@ -48,14 +49,36 @@ gulp.task('default', function(){
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('build_test', function(){
-  return gulp.src('src/**/*.js')
+gulp.task('build_node_test', function(){
+  gulp.src('src/**/*.js')
     .pipe(jsx())
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build'))
 });
 
-gulp.task('test', ['build_test'], function(){
-  return gulp.src('build/test.js')
+gulp.task('node_test', ['build_node_test'], function(){
+  gulp.src('build/test.js')
     .pipe(exec('node <%= file.path %>'))
     .pipe(exec.reporter());
 });
+
+gulp.task('browser_test', function(){
+  gulp.src('src/test.js')
+    .pipe(gulp_webpack({
+      output: {
+        path: __dirname + '/build',
+        filename: 'bundle.js'
+      },
+      module: {
+        loaders: [
+          {test: /\.js$/, loader: 'ts-jsx'}
+        ]
+      },
+      plugins: [
+        new webpack.NormalModuleReplacementPlugin('./init_dom', './empty')
+      ]
+    }))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('default', ['app']);
+gulp.task('test', ['node_test']);
