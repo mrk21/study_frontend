@@ -1,0 +1,26 @@
+{
+  "name": "rails_gulp_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^1.1.1",
+    "event-stream": "^3.2.2",
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-stylus": "^2.0.1",
+    "gulp-webpack": "^1.2.0",
+    "gulp-webserver": "^0.9.0",
+    "lodash": "^3.3.1",
+    "proxy-middleware": "^0.11.0",
+    "rimraf": "^2.2.8",
+    "ts-loader": "^0.3.2",
+    "webpack": "^1.6.0"
+  }
+}
