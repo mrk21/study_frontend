@@ -4,9 +4,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('gulp-webpack');
 var webserver = require('gulp-webserver');
 var rename = require('gulp-rename');
-var es = require('event-stream');
 var path = require('path');
 var del = require('del');
+var rev = require('gulp-rev');
+var revReplace = require('gulp-rev-replace');
+var revDel = require('rev-del');
 var _ = require('lodash');
 
 var to_param = function(){
@@ -62,14 +64,31 @@ gulp.task('css', function(){
   ;
 });
 
-gulp.task('export', ['build'], function(){
-  return es.merge(
-    gulp.src('src/index.html')
-      .pipe(gulp.dest(rails_root))
-    ,
-    gulp.src('build/assets/**/*')
-      .pipe(gulp.dest(path.join(rails_root, 'assets')))
-  );
+gulp.task('install', ['install-html']);
+
+gulp.task('install-assets', ['build'], function(){
+  var dest = path.join(rails_root, 'assets');
+  var manifest = gulp.src(path.join(dest, 'rev-manifest.json'));
+  
+  return gulp.src('build/assets/**/*')
+    .pipe(rev())
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest(dest))
+    .pipe(rev.manifest())
+    .pipe(revDel({dest: dest, force: true}))
+    .pipe(gulp.dest(dest))
+  ;
+});
+
+gulp.task('install-html', ['install-assets'], function(){
+  var dest = rails_root;
+  var assetsDest = path.join(rails_root, 'assets');
+  var manifest = gulp.src(path.join(assetsDest, 'rev-manifest.json'));
+  
+  return gulp.src('src/index.html')
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest(dest))
+  ;
 });
 
 gulp.task('clean', function(next){

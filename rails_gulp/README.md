@@ -20,7 +20,7 @@ This task is same the `server` task.
 
 This task runs development server, and opens [localhost:8000](http://localhost:8000), which will be reload when the files were changed.
 
-### export
+### install
 
 This task sets the build files to the `RAILS_ROOT/public` directory.
 
