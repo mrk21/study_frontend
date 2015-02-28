@@ -5,7 +5,7 @@
 1. Run `bundle install` command
 1. Move `client` directory
 1. Run `npm install` command
-1. Run `./glup export` command
+1. Run `./glup install` command
 1. Move project root
 1. Run `bundle exec rails s` command
 1. Open [localhost:3000](http://localhost:3000) by your browser
