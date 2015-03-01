@@ -9,6 +9,7 @@ var del = require('del');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
 var revDel = require('rev-del');
+var mocha = require('gulp-mocha');
 var _ = require('lodash');
 
 var to_param = function(){
@@ -88,6 +89,12 @@ gulp.task('install-html', ['install-assets'], function(){
   return gulp.src('src/index.html')
     .pipe(revReplace({manifest: manifest}))
     .pipe(gulp.dest(dest))
+  ;
+});
+
+gulp.task('test', function(){
+  return gulp.src('test/unit/**/*.js')
+    .pipe(mocha())
   ;
 });
 
