@@ -10,6 +10,10 @@ var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
 var revDel = require('rev-del');
 var mocha = require('gulp-mocha');
+var ts = require('gulp-typescript');
+var insert = require('gulp-insert');
+var espower = require('gulp-espower');
+var minimist = require('minimist');
 var _ = require('lodash');
 
 var to_param = function(){
@@ -92,9 +96,27 @@ gulp.task('install-html', ['install-assets'], function(){
   ;
 });
 
-gulp.task('test', function(){
-  return gulp.src('test/unit/**/*.js')
-    .pipe(mocha())
+gulp.task('node', function(){
+  return gulp.src(['src/**/*.ts', 'test/**/*.ts'], {base: '.'})
+    .pipe(sourcemaps.init())
+    .pipe(ts(_.merge(ts_config, {
+      module: 'commonjs',
+      sourceRoot: __dirname + '/src'
+    }))).js
+    .pipe(espower())
+    .pipe(insert.prepend("require('source-map-support').install();"))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('build/node'))
+  ;
+});
+
+gulp.task('test', ['node'], function(){
+  var options = {};
+  var args = minimist(process.argv.slice(2));
+  if (args.grep) options.grep = args.grep;
+  
+  return gulp.src('build/node/test/unit/**/*.js')
+    .pipe(mocha(options))
   ;
 });
 

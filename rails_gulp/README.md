@@ -5,6 +5,7 @@
 1. Run `bundle install` command
 1. Move `client` directory
 1. Run `npm install` command
+1. Run `./dtsm install` command
 1. Run `./glup install` command
 1. Move project root
 1. Run `bundle exec rails s` command
@@ -31,6 +32,10 @@ This task watches changing of the javascript, stylesheet and html files, and bui
 ### clean
 
 This task cleans built files.
+
+### test
+
+This task runs unit testing by Node.js.
 
 ### build
 
