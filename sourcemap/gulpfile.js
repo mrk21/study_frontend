@@ -5,6 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('gulp-webpack');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var insert = require('gulp-insert');
 var _ = require('lodash');
 
 var ts_config = {
@@ -28,6 +29,7 @@ gulp.task('typescript', function(){
       module: 'commonjs',
       sourceRoot: __dirname + '/src'
     }))).js
+    .pipe(insert.append("require('source-map-support').install();\n"))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/src'))
   ;
