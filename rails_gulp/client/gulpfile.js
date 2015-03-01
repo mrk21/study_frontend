@@ -14,6 +14,8 @@ var ts = require('gulp-typescript');
 var insert = require('gulp-insert');
 var espower = require('gulp-espower');
 var minimist = require('minimist');
+var karma = require('gulp-karma');
+var named = require('vinyl-named');
 var _ = require('lodash');
 
 var to_param = function(){
@@ -40,7 +42,7 @@ var webpack_config = {
   },
   module: {
     loaders: [
-      {test: /\.ts$/, loader: 'ts?'+ to_param(ts_config, {sourceMap: true})}
+      {test: /\.ts$/, loader: 'webpack-espower!ts?'+ to_param(ts_config, {sourceMap: true})}
     ]
   }
 };
@@ -55,6 +57,9 @@ gulp.task('js', function(){
         publicPath: 'build/assets/javascripts'
       }
     })))
+    .pipe(rename(function(path){
+      console.log(path);
+    }))
     .pipe(gulp.dest('build/assets/javascripts'))
   ;
 });
@@ -117,6 +122,34 @@ gulp.task('test', ['node'], function(){
   
   return gulp.src('build/node/test/unit/**/*.js')
     .pipe(mocha(options))
+  ;
+});
+
+gulp.task('karma', function(){
+  return gulp.src('test/unit/**/*.ts')
+    .pipe(named())
+    .pipe(webpack(_.merge(webpack_config, {
+      output: {
+        publicPath: 'build/karma'
+      }
+    })))
+    .pipe(gulp.dest('build/karma'))
+  ;
+});
+
+gulp.task('browser-test', ['karma'], function(){
+  var action = 'run';
+  var args = minimist(process.argv.slice(2));
+  if (args.watch) {
+    action = 'watch';
+    gulp.watch('test/unit/**/*.ts', ['karma']);
+  }
+  
+  return gulp.src('build/karma/**/*.js')
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: action
+    }))
   ;
 });
 

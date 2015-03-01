@@ -35,7 +35,12 @@ This task cleans built files.
 
 ### test
 
-This task runs unit testing by Node.js.
+This task runs unit testing by Node.js. Ranning tests can choose by `--grep=<pattern>` command line arguments.
+
+
+### browser-test
+
+This task runs unit testing by browser. If `--watch` command line arguments specified, karma will be a watch mode.
 
 ### build
 
@@ -48,6 +53,14 @@ This task builds javascript files.
 ### css
 
 This task builds stylesheet files.
+
+### node
+
+This task builds javascript files for Node.js.
+
+### karma
+
+This task builds unit test files for Karma.
 
 ## Memo
 
