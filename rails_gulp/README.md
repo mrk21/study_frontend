@@ -21,13 +21,9 @@ This task is same the `server` task.
 
 This task runs development server, and opens [localhost:8000](http://localhost:8000), which will be reload when the files were changed.
 
-### install
+### build
 
-This task sets the build files to the `RAILS_ROOT/public` directory.
-
-### watch
-
-This task watches changing of the javascript, stylesheet and html files, and builds the files.
+This task build stylesheet and javascript files.
 
 ### clean
 
@@ -35,16 +31,15 @@ This task cleans built files.
 
 ### test
 
-This task runs unit testing by Node.js. Ranning tests can choose by `--grep=<pattern>` command line arguments.
-
+This task runs unit testing by Node.js. Ranning tests can choose by `--grep=<pattern>` command line arguments. If `--watch` command line arguments specified, will be a watch mode.
 
 ### browser-test
 
 This task runs unit testing by browser. If `--watch` command line arguments specified, karma will be a watch mode.
 
-### build
+### install
 
-This task build stylesheet and javascript files.
+This task sets the build files to the `RAILS_ROOT/public` directory.
 
 ### js
 

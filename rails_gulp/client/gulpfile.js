@@ -1,22 +1,15 @@
 var gulp = require('gulp');
-var stylus = require('gulp-stylus');
-var sourcemaps = require('gulp-sourcemaps');
-var webpack = require('gulp-webpack');
-var webserver = require('gulp-webserver');
-var rename = require('gulp-rename');
-var path = require('path');
+var $ = require('gulp-load-plugins')();
 var del = require('del');
-var rev = require('gulp-rev');
-var revReplace = require('gulp-rev-replace');
 var revDel = require('rev-del');
-var mocha = require('gulp-mocha');
-var ts = require('gulp-typescript');
-var insert = require('gulp-insert');
-var espower = require('gulp-espower');
-var minimist = require('minimist');
-var karma = require('gulp-karma');
 var named = require('vinyl-named');
+var proxy = require('proxy-middleware');
+var path = require('path');
+var url = require('url');
+var minimist = require('minimist');
 var _ = require('lodash');
+
+var args = minimist(process.argv.slice(2));
 
 var to_param = function(){
   return _.chain(arguments)
@@ -47,129 +40,116 @@ var webpack_config = {
   }
 };
 
-gulp.task('build', ['js','css']);
+gulp.task('default', ['build']);
+gulp.task('build', ['js','css','node']);
 
 gulp.task('js', function(){
   return gulp.src('src/index.ts')
-    .pipe(webpack(_.merge(webpack_config, {
+    .pipe($.webpack(_.merge(webpack_config, {
       output: {
         filename: 'bundle.js',
-        publicPath: 'build/assets/javascripts'
       }
     })))
-    .pipe(rename(function(path){
-      console.log(path);
-    }))
     .pipe(gulp.dest('build/assets/javascripts'))
   ;
 });
 
 gulp.task('css', function(){
   return gulp.src('src/index.styl')
-    .pipe(sourcemaps.init())
-    .pipe(stylus())
-    .pipe(sourcemaps.write())
-    .pipe(rename('bundle.css'))
+    .pipe($.rename('bundle.css'))
+    .pipe($.sourcemaps.init())
+    .pipe($.stylus())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest('build/assets/stylesheets'))
-  ;
-});
-
-gulp.task('install', ['install-html']);
-
-gulp.task('install-assets', ['build'], function(){
-  var dest = path.join(rails_root, 'assets');
-  var manifest = gulp.src(path.join(dest, 'rev-manifest.json'));
-  
-  return gulp.src('build/assets/**/*')
-    .pipe(rev())
-    .pipe(revReplace({manifest: manifest}))
-    .pipe(gulp.dest(dest))
-    .pipe(rev.manifest())
-    .pipe(revDel({dest: dest, force: true}))
-    .pipe(gulp.dest(dest))
-  ;
-});
-
-gulp.task('install-html', ['install-assets'], function(){
-  var dest = rails_root;
-  var assetsDest = path.join(rails_root, 'assets');
-  var manifest = gulp.src(path.join(assetsDest, 'rev-manifest.json'));
-  
-  return gulp.src('src/index.html')
-    .pipe(revReplace({manifest: manifest}))
-    .pipe(gulp.dest(dest))
   ;
 });
 
 gulp.task('node', function(){
   return gulp.src(['src/**/*.ts', 'test/**/*.ts'], {base: '.'})
-    .pipe(sourcemaps.init())
-    .pipe(ts(_.merge(ts_config, {
+    .pipe($.sourcemaps.init())
+    .pipe($.typescript(_.merge(ts_config, {
       module: 'commonjs',
       sourceRoot: __dirname + '/src'
     }))).js
-    .pipe(espower())
-    .pipe(insert.prepend("require('source-map-support').install();"))
-    .pipe(sourcemaps.write())
+    .pipe($.espower())
+    .pipe($.insert.prepend("require('source-map-support').install();"))
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest('build/node'))
-  ;
-});
-
-gulp.task('test', ['node'], function(){
-  var options = {};
-  var args = minimist(process.argv.slice(2));
-  if (args.grep) options.grep = args.grep;
-  
-  return gulp.src('build/node/test/unit/**/*.js')
-    .pipe(mocha(options))
   ;
 });
 
 gulp.task('karma', function(){
   return gulp.src('test/unit/**/*.ts')
     .pipe(named())
-    .pipe(webpack(_.merge(webpack_config, {
-      output: {
-        publicPath: 'build/karma'
-      }
-    })))
+    .pipe($.webpack(webpack_config))
     .pipe(gulp.dest('build/karma'))
   ;
 });
 
+gulp.task('clean', function(done){
+  del([
+    'build',
+    path.join(rails_root, 'index.html'),
+    path.join(rails_root, 'assets'),
+  ], {force: true}, done);
+});
+
+gulp.task('install', ['js','css'], function(done){
+  var dest = path.join(rails_root, 'assets');
+  var manifest = path.join(dest, 'rev-manifest.json');
+  
+  gulp.src('build/assets/**/*')
+    .pipe($.rev())
+    .pipe($.revReplace({manifest: gulp.src(manifest)}))
+    .pipe(gulp.dest(dest))
+    .pipe($.rev.manifest())
+    .pipe(revDel({dest: dest, force: true}))
+    .pipe(gulp.dest(dest))
+    .on('end', function(){
+      gulp.src('src/index.html')
+        .pipe($.revReplace({manifest: gulp.src(manifest)}))
+        .pipe(gulp.dest(rails_root))
+        .on('end', done)
+      ;
+    });
+  ;
+});
+
+gulp.task('test', ['node'], function(){
+  var options = {};
+  if (args.grep) options.grep = args.grep;
+  if (args.watch) {
+    gulp.watch('test/unit/**/*.ts', ['test']);
+  }
+  
+  gulp.src('build/node/test/unit/**/*.js')
+    .pipe($.mocha(options))
+  ;
+});
+
+
 gulp.task('browser-test', ['karma'], function(){
   var action = 'run';
-  var args = minimist(process.argv.slice(2));
   if (args.watch) {
     action = 'watch';
     gulp.watch('test/unit/**/*.ts', ['karma']);
   }
   
-  return gulp.src('build/karma/**/*.js')
-    .pipe(karma({
+  gulp.src('build/karma/**/*.js')
+    .pipe($.karma({
       configFile: 'karma.conf.js',
       action: action
     }))
   ;
 });
 
-gulp.task('clean', function(next){
-  return del([
-    'build',
-    path.join(rails_root, 'index.html'),
-    path.join(rails_root, 'assets'),
-  ], {force: true}, next);
-});
-
-gulp.task('watch', ['build'], function(){
+gulp.task('server', ['js','css'], function(){
   gulp.watch('src/**/*.html');
   gulp.watch('src/**/*.styl', ['css']);
   gulp.watch('src/**/*.ts', ['js']);
-});
-
-gulp.task('server', ['watch'], function(){
-  return gulp.src(['src','build'])
-    .pipe(webserver({
+  
+  gulp.src(['src','build'])
+    .pipe($.webserver({
       livereload: true,
       open: true,
       middleware: [
@@ -178,8 +158,6 @@ gulp.task('server', ['watch'], function(){
           return next();
         },
         (function(){
-          var proxy = require('proxy-middleware');
-          var url = require('url');
           var options = url.parse('http://localhost:3000/api');
           options.route = '/api';
           return proxy(options);
@@ -187,5 +165,3 @@ gulp.task('server', ['watch'], function(){
       ]
     }));
 });
-
-gulp.task('default', ['server']);
