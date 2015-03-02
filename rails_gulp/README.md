@@ -15,7 +15,7 @@
 
 ### default
 
-This task is same the `server` task.
+This task is same the `build` task.
 
 ### server
 
