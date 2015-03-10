@@ -74,7 +74,7 @@ gulp.task('browser_test', function(){
         ]
       },
       plugins: [
-        new webpack.NormalModuleReplacementPlugin('./init_dom', './empty')
+        new webpack.NormalModuleReplacementPlugin(/^.*\/init_dom$/, __dirname + '/src/empty')
       ]
     }))
     .pipe(gulp.dest('build'));
