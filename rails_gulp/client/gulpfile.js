@@ -56,9 +56,9 @@ gulp.task('js', function(){
 
 gulp.task('css', function(){
   return gulp.src('src/index.styl')
-    .pipe($.rename('bundle.css'))
     .pipe($.sourcemaps.init())
     .pipe($.stylus())
+    .pipe($.rename('bundle.css'))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('build/assets/stylesheets'))
   ;
