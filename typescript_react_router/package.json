@@ -1,0 +1,24 @@
+{
+  "name": "typescript_react_router",
+  "version": "1.0.0",
+  "description": "* Node.js 0.12.4 * TypeScript 1.5.0 beta * React 0.13.3 * ReactRouter 0.13.3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dtsm": "^0.10.2",
+    "gulp": "^3.8.11",
+    "gulp-webpack": "^1.4.0",
+    "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "rimraf": "^2.3.4",
+    "ts-jsx-loader": "^0.2.0",
+    "ts-loader": "^0.4.3",
+    "typescript": "^1.5.0-beta",
+    "webpack": "^1.9.10"
+  }
+}
