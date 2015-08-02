@@ -3,10 +3,6 @@
     {
       "url": "https://github.com/borisyankov/DefinitelyTyped.git",
       "ref": "master"
-    },
-    {
-      "url": "https://github.com/vasek17/DefinitelyTyped.git",
-      "ref": "master"
     }
   ],
   "path": "typings",
@@ -18,12 +14,7 @@
   },
   "dependencies": {
     "react-router/react-router.d.ts": {
-      "repo": "https://github.com/vasek17/DefinitelyTyped.git",
-      "ref": "403894c47328ead23d90b576d564558fda447dd2"
-    },
-    "react/react-addons.d.ts": {
-      "repo": "https://github.com/vasek17/DefinitelyTyped.git",
-      "ref": "403894c47328ead23d90b576d564558fda447dd2"
+      "ref": "4df20c9706ce6ca27137617770b57f3a0d3f9689"
     }
   }
 }

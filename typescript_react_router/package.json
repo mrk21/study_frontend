@@ -15,10 +15,10 @@
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "rimraf": "^2.3.4",
-    "ts-jsx-loader": "^0.2.0",
-    "ts-loader": "^0.4.3",
-    "typescript": "^1.5.0-beta",
-    "webpack": "^1.9.10"
+    "rimraf": "^2.4.2",
+    "ts-jsx-loader": "^0.2.1",
+    "ts-loader": "^0.4.7",
+    "typescript": "^1.5.3",
+    "webpack": "^1.10.5"
   }
 }

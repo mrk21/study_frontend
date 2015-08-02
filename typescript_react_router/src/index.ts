@@ -1,7 +1,7 @@
 ///<reference path='_references.d.ts' />
 "use strict";
 
-import React = require('react/addons');
+import React = require('react');
 import Router = require('react-router');
 
 import Route = Router.Route;
