@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Get Started</title>
+</head>
+<body>
+  <div class="test1" ng-controller="testAppController1 as app">
+    <h1>{{app.message}}</h1>
+    <button ng-click="app.hello('App1')">Click Me</button>
+  </div>
+  
+  <script src="build/bundle.js"></script>
+</body>
+</html>
