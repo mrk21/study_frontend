@@ -1,12 +1,14 @@
 var angular = require('angular');
 
-var app = angular.module("testApp", []);
+var TodoApp = angular.module('TodoApp', []);
 
-app.controller('testAppController1', function(){
-  this.message = "First App 1";
-
-  this.hello = function(string) {
-    alert('Hello ' + string);
+TodoApp.controller('TodoCtrl', function ($scope) {
+  $scope.todos = [];
+  index = 0;
+  $scope.add = function() {
+    if (!$scope.message) return;
+    $scope.todos.push({id: index, message: $scope.message, done: false});
+    $scope.message = "";
+    index++;
   };
-  
 });

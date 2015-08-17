@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="testApp">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Angular Get Started</title>
-</head>
-<body>
-  <div class="test1" ng-controller="testAppController1 as app">
-    <h1>{{app.message}}</h1>
-    <button ng-click="app.hello('App1')">Click Me</button>
-  </div>
-  
   <script src="build/bundle.js"></script>
+</head>
+<body ng-app="TodoApp">
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Todo</h2>
+    </div>
+    <div ng-controller="TodoCtrl">
+      <form class="bg-info">
+        <label>ToDo: </label>
+        <input type="text" ng-model="message" />
+        <button ng-click="add()">追加</button>
+      </form>
+      <table class="table table-striped">
+        <tr>
+          <th>Done</th>
+          <th>ToDo</th>
+        </tr>
+        <tr ng-repeat="todo in todos">
+          <td><input id="todo_item_{{ $index }}" type="checkbox" ng-model="todo.done" /></td>
+          <td><label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.message }}</label></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
