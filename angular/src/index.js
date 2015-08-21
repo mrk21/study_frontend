@@ -2,10 +2,20 @@ var angular = require('angular');
 
 var TodoApp = angular.module('TodoApp', []);
 
-TodoApp.factory('Todo', function(){
-  return [];
+// Todo model
+TodoApp.service('Todo', function(){
+  this.list = [];
+  
+  this.add = function(message){
+    if (!message) return;
+    
+    this.list.push({
+      id: this.list.length + 1,
+      message: message,
+      done: false
+    });
+  };
 });
-
 
 // Aungular's directive is like Web Components.
 TodoApp.directive('todoForm', function(){
@@ -13,18 +23,14 @@ TodoApp.directive('todoForm', function(){
     templateUrl: 'src/todo_form.html',
     
     controller: function($scope, Todo){
-      index = 0;
-      
-      $scope.add = function(){
-        if (!$scope.message) return;
-        Todo.push({id: index, message: $scope.message, done: false});
-        $scope.message = "";
-        index++;
+      $scope.onClick = function(){
+        Todo.add($scope.message);
+        $scope.message = '';
       };
     }
   };
 });
 
 TodoApp.controller('TodoCtrl', function($scope, Todo){
-  $scope.todos = Todo;
+  $scope.todos = Todo.list;
 });
