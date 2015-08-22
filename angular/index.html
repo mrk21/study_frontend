@@ -8,13 +8,13 @@
 <body ng-app="TodoApp">
   <h2>Todo</h2>
   
-  <div ng-controller="TodoCtrl">
+  <div ng-controller="TodoController">
     <div todo-form></div>
     
     <ul>
       <li ng-repeat="todo in todos">
         <input id="todo_item_{{ $index }}" type="checkbox" ng-model="todo.done" />
-        <label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.message }}</label>
+        <label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.content }}</label>
       </li>
     </ul>
   </div>
