@@ -1,8 +1,9 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var $ = require('gulp-load-plugins')();
 
-gulp.task('default', ['build']);
+gulp.task('default', ['server']);
 
 gulp.task('build', function(){
   browserify({
@@ -14,4 +15,20 @@ gulp.task('build', function(){
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('build'))
   ;
+});
+
+gulp.task('server', function(){
+  gulp.watch('index.html');
+  gulp.watch('app/**/*.js', ['build']);
+  
+  gulp.src(['.']).pipe($.webserver({
+    livereload: true,
+    open: true,
+    middleware: [
+      function(req, res, next){
+        console.log(req.method, req.url);
+        return next();
+      }
+    ]
+  }));
 });

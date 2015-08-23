@@ -12,6 +12,8 @@
     "angular": "^1.4.4",
     "browserify": "^11.0.1",
     "gulp": "^3.9.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-webserver": "^0.9.1",
     "vinyl-source-stream": "^1.1.0"
   }
 }
