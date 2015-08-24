@@ -14,7 +14,7 @@
     <ul>
       <li ng-repeat="todo in todos">
         <input id="todo_item_{{ $index }}" type="checkbox" ng-model="todo.done" />
-        <label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.content }}</label>
+        <label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.content | uppercase }}</label>
       </li>
     </ul>
   </div>
