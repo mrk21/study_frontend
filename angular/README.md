@@ -14,3 +14,5 @@
 * [JavaScript - AngularJSのDirectiveを理解する. - Qiita](http://qiita.com/Quramy/items/dd4e7d2693c32d92048c)
 * [Angularのservice, factory, providerの使い分け #scripty01 - pirosikick's diary](http://pirosikick.hateblo.jp/entry/2014/09/17/064939)
 * [Angular Http](http://www.w3schools.com/angular/angular_http.asp)
+* [AngularJSでカスタムfilterを書いてみよう - AngularJS Ninja Blog](http://angularjsninja.com/blog/2013/11/09/angularjs-filter/)
+* [フィルターについて | AngularJS 1.2 日本語リファレンス | js STUDIO](http://js.studio-kingdom.com/angularjs/guide/filter)
