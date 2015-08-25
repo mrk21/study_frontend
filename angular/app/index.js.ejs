@@ -1,0 +1,3 @@
+<% glob.sync('app/**/*.js').forEach(function(path){ %>
+  require('<%- path.replace('app/','') %>');
+<% }); %>

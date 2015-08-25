@@ -7,6 +7,8 @@
 
 ## See
 
+### angular
+
 * [初心者のためのAngularJSの使い方入門 | Designup](http://designup.jp/angularjs-getstarted-337/)
 * [AngularJS 入門 - Qiita](http://qiita.com/lga0503/items/d8efddcad2574e1938f1#2-4)
 * [AngularJS ではモデルをどう宣言すればいいのか - AngularJS Ninja Blog](http://angularjsninja.com/blog/2013/08/28/how-to-declare-models/)
@@ -16,3 +18,11 @@
 * [Angular Http](http://www.w3schools.com/angular/angular_http.asp)
 * [AngularJSでカスタムfilterを書いてみよう - AngularJS Ninja Blog](http://angularjsninja.com/blog/2013/11/09/angularjs-filter/)
 * [フィルターについて | AngularJS 1.2 日本語リファレンス | js STUDIO](http://js.studio-kingdom.com/angularjs/guide/filter)
+
+### other
+
+* [EJSテンプレートエンジンを使おう！(1/5):ビギナーのための Node.jsプログラミング入門](http://libro.tuyano.com/index3?id=1135003)
+* [テンプレートエンジン「EJS」とタスクランナー「Gulp.js」で爆速HTMLコーディング | 株式会社LIG](http://liginc.co.jp/web/html-css/html/144170)
+* [isaacs/node-glob](https://github.com/isaacs/node-glob)
+* [Node.jsでglob - ZeBeVogue別館](http://d.hatena.ne.jp/zebevogue/20120807/1344291175)
+* [gulp-ejs](https://www.npmjs.com/package/gulp-ejs)
