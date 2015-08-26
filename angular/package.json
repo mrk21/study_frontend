@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.4",
+    "angular-mocks": "^1.4.4",
     "browserify": "^11.0.1",
     "ejs": "^2.3.3",
     "glob": "^5.0.14",
@@ -17,6 +18,9 @@
     "gulp-ejs": "^1.1.1",
     "gulp-load-plugins": "^0.10.0",
     "gulp-webserver": "^0.9.1",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
     "vinyl-source-stream": "^1.1.0"
   }
 }

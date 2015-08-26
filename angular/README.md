@@ -3,7 +3,10 @@
 ## Running this project
 
 1. Run `npm install` command
+1. Run `npm install -g karma-cli` command
 1. Run `./node_modules/.bin/glup` command
+
+If you want to run tests, you need to run `karma start karma.conf.js` command after finishing above steps.
 
 ## See
 
@@ -18,6 +21,7 @@
 * [Angular Http](http://www.w3schools.com/angular/angular_http.asp)
 * [AngularJSでカスタムfilterを書いてみよう - AngularJS Ninja Blog](http://angularjsninja.com/blog/2013/11/09/angularjs-filter/)
 * [フィルターについて | AngularJS 1.2 日本語リファレンス | js STUDIO](http://js.studio-kingdom.com/angularjs/guide/filter)
+* [Jasmine × Karma × Gulp でつくるユニットテスト環境 入門 – AngularJS + TypeScript #3 | NET BIZ DIV. TECH BLOG](http://tech.recruit-mp.co.jp/front-end/post-5299/)
 
 ### other
 
