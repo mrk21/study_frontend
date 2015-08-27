@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var glob = require('glob');
+var karma = require('karma');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('default', ['server']);
@@ -23,6 +24,15 @@ gulp.task('build', ['build_index_js'], function(){
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('build'))
   ;
+});
+
+gulp.task('spec', ['build'], function(done){
+  gulp.watch('app/**/*.js', ['build']);
+  
+  new karma.Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: false
+  }, done).start();
 });
 
 gulp.task('server', ['build'], function(){
