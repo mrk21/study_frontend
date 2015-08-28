@@ -5,13 +5,15 @@ describe('services.Todo', function() {
     Todo.list = [];
   }));
   
-  it('should be uppercase', inject(function(Todo) {
-    Todo.add('content');
-    
-    expect(Todo.list).toEqual([{
-      id: 1,
-      content: 'content',
-      done: false
-    }]);
-  }));
+  describe('#add(content)', function(){
+    it('should add the content to this list', inject(function(Todo) {
+      Todo.add('content');
+      
+      expect(Todo.list).toEqual([{
+        id: 1,
+        content: 'content',
+        done: false
+      }]);
+    }));
+  });
 });
