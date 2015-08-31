@@ -23,6 +23,9 @@ If you want to run tests, you need to run `./node_modules/.bin/gulp spec` comman
 * [フィルターについて | AngularJS 1.2 日本語リファレンス | js STUDIO](http://js.studio-kingdom.com/angularjs/guide/filter)
 * [Jasmine × Karma × Gulp でつくるユニットテスト環境 入門 – AngularJS + TypeScript #3 | NET BIZ DIV. TECH BLOG](http://tech.recruit-mp.co.jp/front-end/post-5299/)
 * [AngularJSサービスをJasmineでBDD（１） | QUARTETCOM TECH BLOG](http://tech.quartetcom.co.jp/2015/02/26/angular-jasmine-bdd-01/)
+* [Testing AngularJS Directives: Handling External Templates | Portland Webworks](http://www.portlandwebworks.com/blog/testing-angularjs-directives-handling-external-templates)
+* [karma-runner/karma-html2js-preprocessor](https://github.com/karma-runner/karma-html2js-preprocessor)
+* [Recipes with Angular.js - Testing Directives](http://fdietz.github.io/recipes-with-angular-js/directives/testing-directives.html)
 
 ### karma
 
