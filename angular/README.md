@@ -26,6 +26,7 @@ If you want to run tests, you need to run `./node_modules/.bin/gulp spec` comman
 * [Testing AngularJS Directives: Handling External Templates | Portland Webworks](http://www.portlandwebworks.com/blog/testing-angularjs-directives-handling-external-templates)
 * [karma-runner/karma-html2js-preprocessor](https://github.com/karma-runner/karma-html2js-preprocessor)
 * [Recipes with Angular.js - Testing Directives](http://fdietz.github.io/recipes-with-angular-js/directives/testing-directives.html)
+* [AngularJS Tests With An HTTP Mock](http://odetocode.com/blogs/scott/archive/2013/06/11/angularjs-tests-with-an-http-mock.aspx)
 
 ### karma
 
