@@ -12,10 +12,7 @@
     <div todo-form></div>
     
     <ul>
-      <li ng-repeat="todo in todos">
-        <input id="todo_item_{{ $index }}" type="checkbox" ng-model="todo.done" />
-        <label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.content | uppercase }}</label>
-      </li>
+      <li ng-repeat="todo in todos" todo-item="{{ todo }}"></li>
     </ul>
   </div>
 </body>
