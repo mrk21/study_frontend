@@ -12,6 +12,12 @@ module.exports = app.directive('todoItem', function(){
     
     link: function(scope, element, attrs){
       scope.todo = scope.$eval(attrs.todoItem);
+    },
+    
+    controller: function($scope, Todo){
+      $scope.remove = function(id){
+        Todo.remove(id);
+      }
     }
   };
 });

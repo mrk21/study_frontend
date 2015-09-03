@@ -13,4 +13,13 @@ module.exports = app.service('Todo', function(){
       done: false
     });
   };
+  
+  this.remove = function(id){
+    for (var i=0; i < this.list.length; i++) {
+      if (this.list[i].id == id) {
+        this.list.splice(i,1);
+        return;
+      }
+    }
+  }
 });

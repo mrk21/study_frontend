@@ -19,4 +19,33 @@ describe('services.Todo', function() {
       }]);
     });
   });
+  
+  describe('#remove(id)', function(){
+    beforeEach(function(){
+      Todo.list = [
+        {
+          id: 2,
+          content: 'content 2',
+          done: false
+        },
+        {
+          id: 4,
+          content: 'content 4',
+          done: false
+        }
+      ];
+    });
+    
+    it('should remove the item whose id is the `id`', function(){
+      Todo.remove(2);
+      
+      expect(Todo.list).toEqual([
+        {
+          id: 4,
+          content: 'content 4',
+          done: false
+        }
+      ]);
+    });
+  });
 });
