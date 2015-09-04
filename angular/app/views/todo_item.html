@@ -1,3 +1,3 @@
 <input id="todo_item_{{ $index }}" type="checkbox" ng-model="todo.done" />
 <label for="todo_item_{{ $index }}" class="done-{{ todo.done }}">{{ todo.content | uppercase }}</label>
-<button type="button" ng-click="remove(todo.id)">remove</button>
+<button type="button" ng-click="remove()">remove</button>

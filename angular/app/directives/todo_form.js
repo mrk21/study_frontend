@@ -1,6 +1,6 @@
 var angular = require('angular');
 var app = require('app');
-var Todo = require('services/todo');
+var Todo = require('factories/todo');
 
 module.exports = app.directive('todoForm', function(){
   return {
@@ -8,8 +8,13 @@ module.exports = app.directive('todoForm', function(){
     
     controller: function($scope, Todo){
       $scope.onClick = function(){
-        Todo.add($scope.content);
-        $scope.content = '';
+        Todo.create($scope.content, function(){
+          $scope.content = '';
+          
+          Todo.all(function(todos){
+            $scope.todos = todos;
+          });
+        });
       };
     }
   };

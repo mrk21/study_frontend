@@ -12,7 +12,9 @@ describe('directives.todoForm', function() {
   }));
   
   describe('when the add button was clicked', function(){
-    it('should add the todo list', function(){
+    it('should call `Todo.create`', function(){
+      spyOn(Todo, 'create');
+      
       $rootScope.content = 'content';
       
       var element = angular.element('<div todo-form></div>');
@@ -20,7 +22,7 @@ describe('directives.todoForm', function() {
       $rootScope.$digest();
       
       element.find('button')[0].click();
-      expect(Todo.list.length).toEqual(1);
+      expect(Todo.create).toHaveBeenCalled();
     });
   });
 });

@@ -1,10 +1,9 @@
 var angular = require('angular');
 var app = require('app');
-var Todo = require('services/todo');
+var Todo = require('factories/todo');
 
-module.exports = app.controller('TodoController', function($scope, $http, Todo){
-  $http.get('./data/todos.json').success(function(response){
-    Todo.list = response;
-    $scope.todos = response;
+module.exports = app.controller('TodoController', function($scope, Todo){
+  Todo.all(function(todos){
+    $scope.todos = todos;
   });
 });
