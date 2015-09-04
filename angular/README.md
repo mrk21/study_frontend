@@ -27,6 +27,9 @@ If you want to run tests, you need to run `./node_modules/.bin/gulp spec` comman
 * [karma-runner/karma-html2js-preprocessor](https://github.com/karma-runner/karma-html2js-preprocessor)
 * [Recipes with Angular.js - Testing Directives](http://fdietz.github.io/recipes-with-angular-js/directives/testing-directives.html)
 * [AngularJS Tests With An HTTP Mock](http://odetocode.com/blogs/scott/archive/2013/06/11/angularjs-tests-with-an-http-mock.aspx)
+* [AngularJS: API: $resource](https://docs.angularjs.org/api/ngResource/service/$resource)
+* [angular.js – resource を使う « Ooharabucyou](http://www.bucyou.net/blog/1108)
+* [AngularJSの $resource でサーバからデータを読み込む - ブログ - ワルブリックス株式会社](http://www.walbrix.com/jp/blog/2014-01-angularjs-resource.html)
 
 ### karma
 
