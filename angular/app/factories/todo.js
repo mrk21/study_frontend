@@ -28,8 +28,8 @@ module.exports = app.factory('Todo', function($resource){
   });
   
   angular.extend(Model.prototype, {
-    remove: function(callback){
-      return this.$remove({id: this.id}).$promise;
+    remove: function(){
+      return Model.$remove({id: this.id}).$promise;
     }
   });
   

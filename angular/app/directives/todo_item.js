@@ -11,7 +11,6 @@ module.exports = app.directive('todoItem', function(Todo){
       $scope.remove = function(){
         $scope.todo.remove()
           .then(function(){
-            console.log(111);
             return Todo.all();
           })
           .then(function(todos){
