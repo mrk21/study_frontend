@@ -8,13 +8,15 @@ module.exports = app.directive('todoForm', function(){
     
     controller: function($scope, Todo){
       $scope.onClick = function(){
-        Todo.create($scope.content, function(){
-          $scope.content = '';
-          
-          Todo.all(function(todos){
+        Todo.create($scope.content)
+          .then(function(created){
+            $scope.content = '';
+            return Todo.all();
+          })
+          .then(function(todos){
             $scope.todos = todos;
-          });
-        });
+          })
+        ;
       };
     }
   };

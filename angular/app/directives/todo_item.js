@@ -9,11 +9,15 @@ module.exports = app.directive('todoItem', function(Todo){
     
     controller: function($scope){
       $scope.remove = function(){
-        $scope.todo.remove(function(){
-          Todo.all(function(todos){
+        $scope.todo.remove()
+          .then(function(){
+            console.log(111);
+            return Todo.all();
+          })
+          .then(function(todos){
             $scope.$parent.todos = todos;
-          });
-        });
+          })
+        ;
       }
     }
   };
