@@ -9,10 +9,10 @@
   <h2>Todo</h2>
   
   <div ng-controller="TodoController">
-    <div todo-form></div>
+    <div todo-form todo-item-added="fetchTodos"></div>
     
     <ul>
-      <li ng-repeat="todo in todos" todo-item></li>
+      <li ng-repeat="todo in todos" todo-item="todo" todo-item-removed="fetchTodos"></li>
     </ul>
   </div>
 </body>

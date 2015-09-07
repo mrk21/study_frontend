@@ -6,15 +6,16 @@ module.exports = app.directive('todoForm', function(){
   return {
     templateUrl: 'app/views/todo_form.html',
     
+    scope: {
+      todoItemAdded: '='
+    },
+    
     controller: function($scope, Todo){
       $scope.onClick = function(){
         Todo.create($scope.content)
           .then(function(created){
             $scope.content = '';
-            return Todo.all();
-          })
-          .then(function(todos){
-            $scope.todos = todos;
+            $scope.todoItemAdded();
           })
         ;
       };

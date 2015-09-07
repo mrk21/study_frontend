@@ -7,14 +7,16 @@ module.exports = app.directive('todoItem', function(Todo){
     replace: false,
     templateUrl: 'app/views/todo_item.html',
     
+    scope: {
+      todo: '=todoItem',
+      todoItemRemoved: '='
+    },
+    
     controller: function($scope){
       $scope.remove = function(){
         $scope.todo.remove()
           .then(function(){
-            return Todo.all();
-          })
-          .then(function(todos){
-            $scope.$parent.todos = todos;
+            $scope.todoItemRemoved();
           })
         ;
       }
