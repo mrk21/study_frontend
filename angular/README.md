@@ -30,6 +30,7 @@ If you want to run tests, you need to run `./node_modules/.bin/gulp spec` comman
 * [AngularJS: API: $resource](https://docs.angularjs.org/api/ngResource/service/$resource)
 * [angular.js – resource を使う « Ooharabucyou](http://www.bucyou.net/blog/1108)
 * [AngularJSの $resource でサーバからデータを読み込む - ブログ - ワルブリックス株式会社](http://www.walbrix.com/jp/blog/2014-01-angularjs-resource.html)
+* [AngularJS - ここらでDirective Scopeの@=&をまとめておきたいと思う - Qiita](http://qiita.com/armorik83/items/72f12cb3a6f040fb8364)
 
 ### karma
 
