@@ -31,11 +31,18 @@ If you want to run tests, you need to run `./node_modules/.bin/gulp spec` comman
 * [angular.js – resource を使う « Ooharabucyou](http://www.bucyou.net/blog/1108)
 * [AngularJSの $resource でサーバからデータを読み込む - ブログ - ワルブリックス株式会社](http://www.walbrix.com/jp/blog/2014-01-angularjs-resource.html)
 * [AngularJS - ここらでDirective Scopeの@=&をまとめておきたいと思う - Qiita](http://qiita.com/armorik83/items/72f12cb3a6f040fb8364)
+* [[AngularJS] $q サービスで覚える Promise ｜ Developers.IO](http://dev.classmethod.jp/client-side/javascript/angularjs-q-promise/)
 
 ### karma
 
 * [karma-runner/gulp-karma](https://github.com/karma-runner/gulp-karma)
 * [Karma - Public Api](https://karma-runner.github.io/0.13/dev/public-api.html)
+
+### jasmine
+
+* [JasmineのSpy機能でテストダブルを作成する - Build Insider](http://www.buildinsider.net/web/bookjslib111/109)
+* [Jasmineの非同期テストが1.3から2.0で変わった - Qiita](http://qiita.com/sassy_watson/items/7b3cab6062186d088cdd)
+* [javascript - jasmine: spyOn(obj, 'method').andCallFake or and.callFake? - Stack Overflow](http://stackoverflow.com/questions/22041745/jasmine-spyonobj-method-andcallfake-or-and-callfake)
 
 ### other
 

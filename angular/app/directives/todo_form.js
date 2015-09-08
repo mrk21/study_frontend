@@ -11,7 +11,7 @@ module.exports = app.directive('todoForm', function(){
     },
     
     controller: function($scope, Todo){
-      $scope.onClick = function(){
+      $scope.add = function(){
         Todo.create($scope.content)
           .then(function(created){
             $scope.content = '';
