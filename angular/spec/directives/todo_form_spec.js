@@ -22,7 +22,7 @@ describe('directives.todoForm', function() {
       }, 0);
     });
     
-    it('should call `Todo.create` and `$scope.onAdd()`', function(done){
+    it('should call `Todo.create()` and `$scope.onAdd()`', function(done){
       $rootScope.content = 'content';
       $rootScope.onAdd = function(){};
       
