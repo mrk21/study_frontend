@@ -19,7 +19,7 @@ module.exports = app.directive('todoItem', function(Todo){
             $scope.todoItemRemoved();
           })
         ;
-      }
+      };
     }
   };
 });
