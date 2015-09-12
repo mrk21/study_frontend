@@ -9,10 +9,19 @@ module.exports = app.directive('todoItem', function(Todo){
     
     scope: {
       todo: '=todoItem',
-      todoItemRemoved: '='
+      todoItemRemoved: '=',
+      todoItemUpdated: '=',
     },
     
     controller: function($scope){
+      $scope.save = function(){
+        $scope.todo.save()
+          .then(function(){
+            $scope.todoItemUpdated();
+          })
+        ;
+      };
+      
       $scope.remove = function(){
         $scope.todo.remove()
           .then(function(){

@@ -42,5 +42,26 @@ describe('directives.todoItem', function() {
         done();
       }, 0);
     });
+    
+    it('should call `Todo#save()` and `$scope.onUpdate()`', function(done){
+      $rootScope.onUpdate = function(){};
+      $rootScope.todo = new Todo({id: 1, content: 'a', done: false});
+      
+      spyOn($rootScope, 'onUpdate');
+      spyOn($rootScope.todo, 'save').and.callFake(function(){
+        return deferred.promise;
+      });
+      
+      var element = angular.element('<div todo-item="todo" todo-item-updated="onUpdate"></div>');
+      $compile(element)($rootScope);
+      $rootScope.$digest();
+      
+      setTimeout(function(){
+        element.find('input')[0].click();
+        expect($rootScope.todo.save).toHaveBeenCalled();
+        expect($rootScope.onUpdate).toHaveBeenCalled();
+        done();
+      }, 0);
+    });
   });
 });

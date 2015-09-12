@@ -59,10 +59,13 @@ gulp.task('server', ['build'], function(){
             res.end();
             return;
           case 'POST':
+            var json = '';
             req.on('data', function(data){
-              var json = data.toString();
-              var obj = JSON.parse(json)
-              self.todos.push(obj);
+              json = data.toString();
+            });
+            req.on('end', function(){
+              var record = JSON.parse(json)
+              self.todos.push(record);
               res.writeHead(200, {'Content-Type': 'application/json'});
               res.write(json);
               res.end();
@@ -88,6 +91,25 @@ gulp.task('server', ['build'], function(){
                 return;
               }
             }
+            return;
+          case 'PUT':
+            var json = '';
+            req.on('data', function(data){
+              json += data.toString();
+            });
+            req.on('end', function(){
+              var record = JSON.parse(json)
+              
+              for (var i=0; i < self.todos.length; i++) {
+                if (self.todos[i].id == id) {
+                  self.todos[i] = record;
+                  res.writeHead(200, {'Content-Type': 'application/json'});
+                  res.write(JSON.stringify(self.todos[i]));
+                  res.end();
+                  return;
+                }
+              }
+            });
             return;
           }
           return;

@@ -4,10 +4,11 @@ var app = require('app');
 module.exports = app.factory('Todo', function($resource){
   var id = 0;
   
-  var Model = $resource('/api/todos/:id', {}, {
+  var Model = $resource('/api/todos/:id', {id: '@id'}, {
     $all:    {method: 'GET', isArray: true},
-    $create: {method: 'POST'},
+    $create: {method: 'POST', params: {id: ''}},
     $remove: {method: 'DELETE'},
+    $save:   {method: 'PUT'},
   });
   
   angular.extend(Model, {
@@ -30,6 +31,13 @@ module.exports = app.factory('Todo', function($resource){
   angular.extend(Model.prototype, {
     remove: function(){
       return Model.$remove({id: this.id}).$promise;
+    },
+    save: function(){
+      return Model.$save({
+        id: this.id,
+        content: this.content,
+        done: this.done
+      }).$promise;
     }
   });
   
