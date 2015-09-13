@@ -32,6 +32,7 @@ If you want to run tests, you need to run `./node_modules/.bin/gulp spec` comman
 * [AngularJSの $resource でサーバからデータを読み込む - ブログ - ワルブリックス株式会社](http://www.walbrix.com/jp/blog/2014-01-angularjs-resource.html)
 * [AngularJS - ここらでDirective Scopeの@=&をまとめておきたいと思う - Qiita](http://qiita.com/armorik83/items/72f12cb3a6f040fb8364)
 * [[AngularJS] $q サービスで覚える Promise ｜ Developers.IO](http://dev.classmethod.jp/client-side/javascript/angularjs-q-promise/)
+* [Testing Promises with Jasmine](http://ng-learn.org/2014/08/Testing_Promises_with_Jasmine/)
 
 ### karma
 
