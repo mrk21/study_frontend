@@ -29,7 +29,9 @@ describe('directives.todoItem', function() {
       
       expect($rootScope.onRemove).toHaveBeenCalled();
     });
-    
+  });
+  
+  describe('when the checkbox was clicked', function(){
     it('should call `$scope.onUpdate()`', function(){
       $rootScope.onUpdate = function(){};
       $rootScope.todo = new Todo({id: 1, content: 'a', done: false});
