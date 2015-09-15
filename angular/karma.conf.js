@@ -20,6 +20,7 @@ module.exports = function(config) {
       
       'app/views/**/*.html',
       'build/bundle.js',
+      'spec/spec_helper.js',
       'spec/**/*.js'
     ],
 
