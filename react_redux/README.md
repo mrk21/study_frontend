@@ -37,3 +37,7 @@ TypeScript ES6 Mode => Babel => JS
     * [Browsersyncを利用してお手軽ブラウザ確認環境をつくろう - メドピア開発者ブログ](http://tech.medpeer.co.jp/entry/2015/06/09/071758)
 * require-dir
     * [gulpタスクの分割 - Qiita](http://qiita.com/dhun/items/c8633800097f1e7ecf70)
+* del
+    * [ファイル削除にはgulpプラグインを使わない - Qiita](http://qiita.com/shinnn/items/bd7ad79526eff37cebd0)
+* gulp-help
+    * [chmontgomery/gulp-help: Adds a default help task to gulp and provides the ability to add custom help messages to your gulp tasks](https://github.com/chmontgomery/gulp-help)

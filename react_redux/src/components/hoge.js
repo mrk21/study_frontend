@@ -1,8 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Provider, connect } from 'react-redux';
-import { createStore } from 'redux';
-import rootReducer from 'reducers';
+import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({state});
 

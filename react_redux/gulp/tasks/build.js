@@ -11,7 +11,7 @@ gulp.task('build:js', done => {
   });
 });
 
-gulp.task('build:html', () => {
-  return gulp.src('src/index.html')
-    .pipe(gulp.dest('dist'));
-});
+gulp.task('build:html', () =>
+  gulp.src('src/index.html')
+    .pipe(gulp.dest('dist'))
+);
