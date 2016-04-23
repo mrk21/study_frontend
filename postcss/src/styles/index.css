@@ -1,5 +1,7 @@
-body {
-  padding: 0;
-  border-radius: 5px;
-  display: flex;
+/// Custom Property
+:root {
+  --color: red;
+}
+custom-property {
+  color: var(--color);
 }
