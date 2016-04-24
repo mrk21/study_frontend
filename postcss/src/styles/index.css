@@ -1,7 +1,7 @@
-/// Custom Property
+/* Custom Property */
 :root {
-  --color: red;
+  --font-size: 30px;
 }
-custom-property {
-  color: var(--color);
+.custom-property {
+  font-size: var(--font-size);
 }
