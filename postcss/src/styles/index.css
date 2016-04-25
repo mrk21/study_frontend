@@ -5,3 +5,8 @@
 .custom-property {
   font-size: var(--font-size);
 }
+
+/* Reduced Calc */
+.reduced-calc {
+  font-size: calc(var(--font-size) * 2);
+}
