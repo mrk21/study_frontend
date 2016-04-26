@@ -10,3 +10,8 @@
 .reduced-calc {
   font-size: calc(var(--font-size) * 2);
 }
+
+/* Filter */
+.filter {
+    filter: blur(1px);
+}
