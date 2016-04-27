@@ -15,3 +15,10 @@
 .filter {
     filter: blur(1px);
 }
+
+/* Custom Selectors */
+@custom-selector :--custom-selectors .custom-selectors-1, .custom-selectors-2, .custom-selectors-3;
+
+:--custom-selectors {
+  color: red;
+}

@@ -12,3 +12,9 @@ PostCSS + cssnext
 * [screens/gulpfile.js at master · Okahyphen/screens](https://github.com/Okahyphen/screens/blob/master/gulpfile.js)
 * [postcss/postcss-custom-properties: PostCSS plugin to transform W3C CSS Custom Properties for cascading variables](https://github.com/postcss/postcss-custom-properties)
 * [cssnext - Use tomorrow’s CSS syntax, today.](http://cssnext.io/)
+* [cssnextでみる次世代CSSとPostCSS | Yucchiy's blog](http://blog.yucchiy.com/2015/04/22/cssnext-postcss-for-nextgeneration-of-css/)
+
+### Custom Selectors
+
+* [postcss/postcss-custom-selectors: PostCSS Custom Selectors](https://github.com/postcss/postcss-custom-selectors)
+* [CSS Extensions](https://drafts.csswg.org/css-extensions/#custom-selectors)
