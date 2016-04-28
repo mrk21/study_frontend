@@ -22,3 +22,8 @@
 :--custom-selectors {
   color: red;
 }
+
+/* Colors */
+.colors-rrggbbaa {
+  background: #00000033;
+}
