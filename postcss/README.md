@@ -18,3 +18,7 @@ PostCSS + cssnext
 
 * [postcss/postcss-custom-selectors: PostCSS Custom Selectors](https://github.com/postcss/postcss-custom-selectors)
 * [CSS Extensions](https://drafts.csswg.org/css-extensions/#custom-selectors)
+
+### Colors
+
+* [8. Specifying Grays: the gray() functional notation - CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#grays)

@@ -24,6 +24,18 @@
 }
 
 /* Colors */
-.colors-rrggbbaa {
+
+/** #rrggbbaa **/
+.colors-rrggbbaa-color {
   background: #00000033;
+}
+
+/** rgba() **/
+.colors-rgba-function {
+  background: rgba(0,0,0,0.2);
+}
+
+/** gray() **/
+.colors-gray-function {
+  background: gray(0,0.2);
 }
