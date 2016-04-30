@@ -14,11 +14,13 @@ PostCSS + cssnext
 * [cssnext - Use tomorrow’s CSS syntax, today.](http://cssnext.io/)
 * [cssnextでみる次世代CSSとPostCSS | Yucchiy's blog](http://blog.yucchiy.com/2015/04/22/cssnext-postcss-for-nextgeneration-of-css/)
 
-### Custom Selectors
+### CSS Custom Selectors
 
 * [postcss/postcss-custom-selectors: PostCSS Custom Selectors](https://github.com/postcss/postcss-custom-selectors)
 * [CSS Extensions](https://drafts.csswg.org/css-extensions/#custom-selectors)
 
-### Colors
+### CSS Color Module Level 4
 
-* [8. Specifying Grays: the gray() functional notation - CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#grays)
+* [CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/)
+* [CSS Color Module Level 4 （日本語訳）](https://triple-underscore.github.io/css-color-ja.html)
+* [7. HWB 色： hwb() 関数 - CSS Color Module Level 4 （日本語訳）](https://triple-underscore.github.io/css-color-ja.html#the-hwb-notation)

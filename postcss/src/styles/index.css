@@ -23,7 +23,7 @@
   color: red;
 }
 
-/* Colors */
+/* CSS Color Module Level 4 */
 
 /** #rrggbbaa **/
 .colors-rrggbbaa-color {
@@ -38,4 +38,10 @@
 /** gray() **/
 .colors-gray-function {
   background: gray(0,0.2);
+}
+
+/** hwb() **/
+/* @see: https://triple-underscore.github.io/css-color-ja.html#the-hwb-notation */
+.colors-hwb-function {
+  background: hwb(0, 0%, 100%, 0.2); /* hwb( <hue>, <white-percentage>, <black-percentage> [, <alpha-value> ]? ) */
 }
