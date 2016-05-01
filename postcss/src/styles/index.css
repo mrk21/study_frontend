@@ -45,3 +45,9 @@
 .colors-hwb-function {
   background: hwb(0, 0%, 100%, 0.2); /* hwb( <hue>, <white-percentage>, <black-percentage> [, <alpha-value> ]? ) */
 }
+
+/** color() **/
+/** @see [11. Modifying Colors: the color-mod() function - CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#modifying-colors) **/
+.colors-color-function {
+  background: color(0 alpha(20%));
+}
