@@ -51,3 +51,9 @@
 .colors-color-function {
   background: color(0 alpha(20%));
 }
+
+/** rebeccapurple color **/
+.colors-rebeccapurple-color {
+  background: rebeccapurple;
+  color: #fff;
+}
