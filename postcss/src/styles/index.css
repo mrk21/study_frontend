@@ -57,3 +57,12 @@
   background: rebeccapurple;
   color: #fff;
 }
+
+/* custom media queries */
+@custom-media --custom-media-queries (max-width: 500px);
+
+@media (--custom-media-queries) {
+  .custom-media-queries {
+    font-weight: bold;
+  }
+}
