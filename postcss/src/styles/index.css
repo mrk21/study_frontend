@@ -73,3 +73,12 @@
     font-weight: bold;
   }
 }
+
+/* CSS Cascading & Inheritance */
+div.cascading-inheritance {
+  font-size: 32px;
+}
+
+div.cascading-inheritance .cascading-inheritance-nest {
+  all: initial;
+}

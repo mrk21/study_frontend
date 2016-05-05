@@ -30,3 +30,7 @@ PostCSS + cssnext
 
 * [10. Custom Media Queries - Media Queries Level 4](https://drafts.csswg.org/mediaqueries/#custom-mq)
 * [2.4.3. Evaluating Media Features in a Range Context - Media Queries Level 4](https://drafts.csswg.org/mediaqueries/#mq-range-context)
+
+### CSS Cascading & Inheritance
+
+* [all, initial, unsetでCSSのリセットと継承回避をする - fragmentary](http://myakura.hatenablog.com/entry/2013/12/11/183718)
