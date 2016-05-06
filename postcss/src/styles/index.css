@@ -75,10 +75,12 @@
 }
 
 /* CSS Cascading & Inheritance */
-div.cascading-inheritance {
+.cascading-inheritance {
   font-size: 32px;
+  background: #eee;
+  padding: 5px;
 }
 
-div.cascading-inheritance .cascading-inheritance-nest {
+.cascading-inheritance-reset {
   all: initial;
 }
