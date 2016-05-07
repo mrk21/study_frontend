@@ -84,3 +84,8 @@
 .cascading-inheritance-reset {
   all: initial;
 }
+
+/* any-link pseudo class */
+.any-link-pseudo-class:any-link {
+    background-color: yellow;
+}
