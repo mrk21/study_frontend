@@ -87,5 +87,11 @@
 
 /* any-link pseudo class */
 .any-link-pseudo-class:any-link {
-    background-color: yellow;
+  background-color: #ff0;
+}
+
+/* multiple matches pseudo class */
+.multiple-matches-pseudo-class div:matches(.a, .c) {
+  font-size: 24px;
+  font-weight: bold;
 }
