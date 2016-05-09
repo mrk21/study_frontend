@@ -95,3 +95,9 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+/* multiple not pseudo class */
+.multiple-not-pseudo-class div:not(.a, .c) {
+  font-size: 24px;
+  font-weight: bold;
+}
