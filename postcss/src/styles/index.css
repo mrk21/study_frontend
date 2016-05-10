@@ -101,3 +101,9 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+/* pseudo element (fallback) */
+.pseudo-element::before {
+  display: inline-block;
+  content: '[before pseudo element]';
+}
