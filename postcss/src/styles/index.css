@@ -107,3 +107,14 @@
   display: inline-block;
   content: '[before pseudo element]';
 }
+
+/* rem unit */
+.rem-unit {
+  font-size: 2rem;
+}
+.rem-unit > .child {
+  font-size: 10px;
+}
+.rem-unit > .child > .child {
+  font-size: 2rem;
+}
