@@ -78,3 +78,21 @@
   </div>
 </div>
 
+<h2>nesting</h2>
+<div class="nesting">
+  <pre class="child1">
+.nesting {
+  & .child {
+    background: #eee;
+  }
+}
+  </pre>
+  
+  <pre class="child2">
+.nesting {
+  @nest & .child2 {
+    background: #eee;
+  }
+}
+  </pre>
+</div>

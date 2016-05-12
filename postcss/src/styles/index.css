@@ -118,3 +118,16 @@
 .rem-unit > .child > .child {
   font-size: 2rem;
 }
+
+/* nesting */
+.nesting {
+  & .child1 {
+    background: #eee;
+  }
+  @nest & .child2 {
+    background: #eee;
+  }
+  @media (max-width: 500px) {
+    color: yellow;
+  }
+}
