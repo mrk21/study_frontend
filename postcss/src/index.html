@@ -80,6 +80,7 @@
 
 <h2>nesting</h2>
 <div class="nesting">
+  <h3>direct nesting</h3>
   <pre class="child1">
 .nesting {
   & .child {
@@ -88,10 +89,20 @@
 }
   </pre>
   
+  <h3>nesting by at rule</h3>
   <pre class="child2">
 .nesting {
   @nest & .child2 {
     background: #eee;
+  }
+}
+  </pre>
+  
+  <h3>media query nesting</h3>
+  <pre class="child3">
+@media (width > 500px) {
+  @media (width < 700px) {
+    color: yellow;
   }
 }
   </pre>

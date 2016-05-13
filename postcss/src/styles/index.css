@@ -127,7 +127,9 @@
   @nest & .child2 {
     background: #eee;
   }
-  @media (max-width: 500px) {
-    color: yellow;
+  @media (width > 500px) {
+    @media (width < 700px) {
+      color: yellow;
+    }
   }
 }
