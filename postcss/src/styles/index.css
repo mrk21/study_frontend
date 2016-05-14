@@ -133,3 +133,8 @@
     }
   }
 }
+
+/* font variant */
+.font-variant {
+  font-variant: small-caps;
+}

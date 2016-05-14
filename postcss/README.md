@@ -34,3 +34,7 @@ PostCSS + cssnext
 ### CSS Cascading & Inheritance
 
 * [all, initial, unsetでCSSのリセットと継承回避をする - fragmentary](http://myakura.hatenablog.com/entry/2013/12/11/183718)
+
+### Font variant
+
+* [HTML5 & CSS3 リファレンス - font-variant プロパティ（フォント変換の規則の一括指定）](http://www.osaka-kyoiku.ac.jp/~joho/html5_ref/css/font-variant_css.php?menutype=2dtaldl01l02l03A0)
