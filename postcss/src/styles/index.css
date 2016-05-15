@@ -1,4 +1,9 @@
-/* Custom Property */
+/* Auto prefixer (polyfill) */
+.auto-prefixer {
+  display: flex;
+}
+
+/* Custom Property (polyfill) */
 :root {
   --font-size: 30px;
 }
@@ -6,7 +11,7 @@
   font-size: var(--font-size);
 }
 
-/* Reduced Calc */
+/* Reduced Calc (polyfill) */
 .reduced-calc {
   font-size: calc(var(--font-size) * 2);
 }
@@ -16,7 +21,7 @@
     filter: blur(1px);
 }
 
-/* Custom Selectors */
+/* Custom Selectors (polyfill) */
 @custom-selector :--custom-selectors .custom-selectors-1, .custom-selectors-2, .custom-selectors-3;
 
 :--custom-selectors {
@@ -25,40 +30,40 @@
 
 /* CSS Color Module Level 4 */
 
-/** #rrggbbaa **/
+/** #rrggbbaa (polyfill) **/
 .colors-rrggbbaa-color {
   background: #00000033;
 }
 
-/** rgba() **/
+/** rgba() (polyfill) **/
 .colors-rgba-function {
   background: rgba(0,0,0,0.2);
 }
 
-/** gray() **/
+/** gray() (polyfill) **/
 .colors-gray-function {
   background: gray(0,0.2);
 }
 
-/** hwb() **/
+/** hwb() (polyfill) **/
 /* @see: https://triple-underscore.github.io/css-color-ja.html#the-hwb-notation */
 .colors-hwb-function {
   background: hwb(0, 0%, 100%, 0.2); /* hwb( <hue>, <white-percentage>, <black-percentage> [, <alpha-value> ]? ) */
 }
 
-/** color() **/
+/** color() (polyfill) **/
 /** @see [11. Modifying Colors: the color-mod() function - CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/#modifying-colors) **/
 .colors-color-function {
   background: color(0 alpha(20%));
 }
 
-/** rebeccapurple color **/
+/** rebeccapurple color (polyfill) **/
 .colors-rebeccapurple-color {
   background: rebeccapurple;
   color: #fff;
 }
 
-/* custom media queries */
+/* custom media queries (polyfill) */
 @custom-media --custom-media-queries (max-width: 500px);
 
 @media (--custom-media-queries) {
@@ -67,14 +72,14 @@
   }
 }
 
-/* media queries ranges */
+/* media queries ranges (polyfill) */
 @media (width >= 500px) and (width <= 700px) {
   .media-queries-ranges {
     font-weight: bold;
   }
 }
 
-/* CSS Cascading & Inheritance */
+/* CSS Cascading & Inheritance (polyfill) */
 .cascading-inheritance {
   font-size: 32px;
   background: #eee;
@@ -85,30 +90,30 @@
   all: initial;
 }
 
-/* any-link pseudo class */
+/* any-link pseudo class (polyfill) */
 .any-link-pseudo-class:any-link {
   background-color: #ff0;
 }
 
-/* multiple matches pseudo class */
+/* multiple matches pseudo class (polyfill) */
 .multiple-matches-pseudo-class div:matches(.a, .c) {
   font-size: 24px;
   font-weight: bold;
 }
 
-/* multiple not pseudo class */
+/* multiple not pseudo class (polyfill) */
 .multiple-not-pseudo-class div:not(.a, .c) {
   font-size: 24px;
   font-weight: bold;
 }
 
-/* pseudo element (fallback) */
+/* pseudo element (polyfill) */
 .pseudo-element::before {
   display: inline-block;
   content: '[before pseudo element]';
 }
 
-/* rem unit */
+/* rem unit (polyfill) */
 .rem-unit {
   font-size: 2rem;
 }
@@ -117,6 +122,11 @@
 }
 .rem-unit > .child > .child {
   font-size: 2rem;
+}
+
+/* font variant (polyfill) */
+.font-variant {
+  font-variant: small-caps;
 }
 
 /* nesting */
@@ -132,9 +142,4 @@
       color: yellow;
     }
   }
-}
-
-/* font variant */
-.font-variant {
-  font-variant: small-caps;
 }
