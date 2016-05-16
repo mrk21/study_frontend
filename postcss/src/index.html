@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <meta charset="UTF-8" />
-<title>test</title>
+<title>PostCSS</title>
 <link rel="stylesheet" href="styles/index.css" />
 
-<h1>test</h1>
+<h1>PostCSS</h1>
 
-<h2>Auto prefixer</h2>
+<h2>CSS Next<h2>
+
+<h3>Auto prefixer</h3>
 <div class="auto-prefixer">
   <div>a</div>
   <div>b</div>
   <div>c</div>
 </div>
 
-<h2>Custom Property</h2>
+<h3>Custom Property</h3>
 <div class="custom-property">test</div>
 
-<h2>Reduced Calc</h2>
+<h3>Reduced Calc</h3>
 <div class="reduced-calc">test</div>
 
-<h2>Filter</h2>
+<h3>Filter</h3>
 <div class="filter">test</div>
 
-<h2>Custom Selectors</h2>
+<h3>Custom Selectors</h3>
 <div class="custom-selectors-1">test</div>
 <div class="custom-selectors-2">test</div>
 <div class="custom-selectors-3">test</div>
 
-<h2>Colors</h2>
+<h3>Colors</h3>
 
-<h3>#rrggbbaa color</h3>
+<h4>#rrggbbaa color</h4>
 <div class="colors-rrggbbaa-color">#00000033</div>
 
-<h3>rgba() function</h3>
+<h4>rgba() function</h4>
 <div class="colors-rgba-function">rgba(0,0,0,0.2)</div>
 
-<h3>gray() function</h3>
+<h4>gray() function</h4>
 <div class="colors-gray-function">gray(0,0.2)</div>
 
-<h3>hwb() function</h3>
+<h4>hwb() function</h4>
 <div class="colors-hwb-function">hwb(0, 0%, 100%, 0.2)</div>
 
-<h3>color() function</h3>
+<h4>color() function</h4>
 <div class="colors-color-function">color(0 alpha(20%))</div>
 
-<h3>rebeccapurple color</h3>
+<h4>rebeccapurple color</h4>
 <div class="colors-rebeccapurple-color">test</div>
 
-<h2>custom media queries</h2>
+<h3>custom media queries</h3>
 <div class="custom-media-queries">@custom-media --custom-media-queries (max-width: 500px)</div>
 
-<h2>media queries ranges</h2>
+<h3>media queries ranges</h3>
 <div class="media-queries-ranges">@media (width >= 500px) and (width <= 700px)</div>
 
-<h2>cascading inheritance</h2>
+<h3>cascading inheritance</h3>
 <div class="cascading-inheritance">&lt;div class="cascading-inheritance"&gt;</div>
 <div class="cascading-inheritance cascading-inheritance-reset">&lt;div class="cascading-inheritance cascading-inheritance-reset"&gt;</div>
 
-<h2>any-link pseudo class</h2>
+<h3>any-link pseudo class</h3>
 <a class="any-link-pseudo-class" href="#">test</a>
 
-<h2>multiple matches pseudo class</h2>
+<h3>multiple matches pseudo class</h3>
 <div class="multiple-matches-pseudo-class">
   <code>.multiple-matches-pseudo-class div:matches(.a, .c)</code>
   <div class="a">a</div>
@@ -67,7 +69,7 @@
   <div class="c">c</div>
 </div>
 
-<h2>multiple not pseudo class</h2>
+<h3>multiple not pseudo class</h3>
 <div class="multiple-not-pseudo-class">
   <code>.multiple-not-pseudo-class div:not(.a, .c)</code>
   <div class="a">a</div>
@@ -75,19 +77,19 @@
   <div class="c">c</div>
 </div>
 
-<h2>pseudo element (fallback pseudo class syntax (:))</h2>
+<h3>pseudo element (fallback pseudo class syntax (:))</h3>
 <p class="pseudo-element">.pseudo-element::before</p>
 
-<h2>rem unit</h2>
+<h3>rem unit</h3>
 <div class="rem-unit">root(font-size: 2rem)
   <div class="child">root > child(font-size: 10px)
     <div class="child">root > child > child(font-size: 2rem)</div>
   </div>
 </div>
 
-<h2>nesting</h2>
+<h3>nesting</h3>
 <div class="nesting">
-  <h3>direct nesting</h3>
+  <h4>direct nesting</h4>
   <pre class="child1">
 .nesting {
   & .child {
@@ -96,7 +98,7 @@
 }
   </pre>
   
-  <h3>nesting by at rule</h3>
+  <h4>nesting by at rule</h4>
   <pre class="child2">
 .nesting {
   @nest & .child2 {
@@ -105,7 +107,7 @@
 }
   </pre>
   
-  <h3>media query nesting</h3>
+  <h4>media query nesting</h4>
   <pre class="child3">
 @media (width > 500px) {
   @media (width < 700px) {
@@ -115,5 +117,8 @@
   </pre>
 </div>
 
-<h2>font variant</h2>
+<h3>font variant</h3>
 <div class="font-variant">Test</div>
+
+<h2>PostCSS Plugin<h2>
+<div class="my-plugin">test</div>

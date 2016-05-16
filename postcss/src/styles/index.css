@@ -1,3 +1,4 @@
+/* CSS Next */
 /* Auto prefixer (polyfill) */
 .auto-prefixer {
   display: flex;
@@ -142,4 +143,11 @@
       color: yellow;
     }
   }
+}
+
+
+/* PostCSS Plugin */
+/* my plugin */
+.my-plugin {
+  background: 💩;
 }
