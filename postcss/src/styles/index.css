@@ -149,5 +149,5 @@
 /* PostCSS Plugin */
 /* my plugin */
 .my-plugin {
-  background: 💩;
+  custom-property: 💩;
 }
