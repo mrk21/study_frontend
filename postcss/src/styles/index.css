@@ -149,5 +149,6 @@
 /* PostCSS Plugin */
 /* my plugin */
 .my-plugin {
-  custom-property: 💩;
+  font-weight: bold;
+  custom-background: 💩;
 }
