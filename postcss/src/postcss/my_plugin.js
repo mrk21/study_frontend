@@ -8,7 +8,9 @@ const myPlugin = postcss.plugin('myPlugin', options => {
         decl.value = decl.value.replace('💩','#7F4A1E');
         
         const comment = postcss.comment({text: 'converted from custom-background'});
-        comment.moveBefore(decl)
+        comment.moveBefore(decl);
+        
+        comment.prev().remove();
       }
     });
   };
