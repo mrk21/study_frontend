@@ -44,6 +44,9 @@ TypeScript ES6 Mode => Babel => JS
 
 * generator
     * [ES2015新機能: ジェネレータをマスターしたい - Qiita](http://qiita.com/niisan-tokyo/items/562b1ec8b059b81e6d85)
+    * [最近のjs非同期処理 PromiseとGeneratorの共存 - Qiita](http://qiita.com/kidach1/items/d997df84a0ede39d76ad)
+    * [ES6時代のJavaScript - クックパッド開発者ブログ](http://techlife.cookpad.com/entry/2015/02/02/094607)
+    * [tj/co: The ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc)](https://github.com/tj/co)
 
 ### React and Redux
 

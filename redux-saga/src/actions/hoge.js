@@ -1,8 +1,8 @@
-export function doSomething() {
+export function doSomething(value) {
   return {
     type: 'DO_SOMETHING',
     payload: {
-      value: 1
+      value: value
     }
   };
 }

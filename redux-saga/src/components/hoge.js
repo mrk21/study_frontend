@@ -10,14 +10,16 @@ class Hoge extends React.Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
+    this.state = {value: 0};
   }
   
   handleClick() {
-    this.props.doSomething();
+    this.setState({value: this.state.value + 1});
+    this.props.doSomething(this.state.value);
   }
   
   render() {
-    return <p onClick={ this.handleClick }>hoge</p>;
+    return <p onClick={ this.handleClick }>{ this.state.value }</p>;
   }
 }
 

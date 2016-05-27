@@ -1,9 +1,20 @@
-import { takeEvery, delay } from 'redux-saga'
+import { takeEvery } from 'redux-saga'
 import { put } from 'redux-saga/effects'
 
-function* incrementAsync() {
-  yield delay(1000);
-  yield put({ type: 'INCREMENT' });
+function* incrementAsync(action) {
+  try {
+    const result = yield new Promise((resolve, reject) => {
+      setTimeout(() => {
+        action.payload.value % 2 ? reject(action) : resolve({a: 1});
+      }, 1000);
+    });
+    console.log(result);
+    yield put({type: 'INCREMENT'});
+  }
+  catch (e) {
+    console.log(e);
+    yield put({type: 'ERROR'});
+  }
 }
 
 function* watchIncrementAsync() {
