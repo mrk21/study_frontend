@@ -15,7 +15,7 @@
 * Babel
 
 ```
-TypeScript ES6 Mode => Babel => JS
+Babel => JS
 ```
 
 ### JavaScript Framework/Core library

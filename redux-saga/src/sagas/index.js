@@ -1,7 +1,12 @@
 import { takeEvery } from 'redux-saga'
-import { put } from 'redux-saga/effects'
+import { select, put } from 'redux-saga/effects'
 
-function* incrementAsync(action) {
+function* selectSaga(action) {
+  const a = yield select(state => state);
+  console.log(a);
+}
+
+function* promiseSaga(action) {
   try {
     const result = yield new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -17,8 +22,8 @@ function* incrementAsync(action) {
   }
 }
 
-function* watchIncrementAsync() {
-  yield* takeEvery('DO_SOMETHING', incrementAsync);
+function* watchSaga() {
+  yield* takeEvery('DO_SOMETHING', promiseSaga);
 }
 
 function* helloSaga() {
@@ -28,6 +33,7 @@ function* helloSaga() {
 export default function* rootSaga() {
   yield [
     helloSaga(),
-    watchIncrementAsync()
+    watchSaga(),
+    selectSaga()
   ];
 }
