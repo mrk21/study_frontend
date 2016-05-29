@@ -1,10 +1,6 @@
-function rootReducer(state = {}, action) {
-  switch (action.type) {
-    case 'DO_SOMETHING':
-      return Object.assign({}, state, action.payload);
-    default:
-      return Object.assign({}, state);
-  }
-}
+import { combineReducers } from 'redux';
+import api from './api';
 
-export default rootReducer;
+export default combineReducers({
+  api
+});

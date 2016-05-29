@@ -1,29 +1,34 @@
-import { takeEvery } from 'redux-saga'
-import { select, put } from 'redux-saga/effects'
+import { takeEvery } from 'redux-saga';
+import { select, put } from 'redux-saga/effects';
 
 function* selectSaga(action) {
-  const a = yield select(state => state);
-  console.log(a);
+  const api = yield select(state => state.api);
+  console.log(api);
 }
 
 function* promiseSaga(action) {
   try {
-    const result = yield new Promise((resolve, reject) => {
+    const data = yield new Promise((resolve, reject) => {
       setTimeout(() => {
-        action.payload.value % 2 ? reject(action) : resolve({a: 1});
+        if (action.payload.count % 2 === 0) {
+          resolve('data');
+        }
+        else {
+          reject('error')
+        }
       }, 1000);
     });
-    console.log(result);
-    yield put({type: 'INCREMENT'});
+    console.log(data);
+    yield put({type: 'RECEIVE', payload: { data }});
   }
-  catch (e) {
-    console.log(e);
-    yield put({type: 'ERROR'});
+  catch (error) {
+    console.log(error);
+    yield put({type: 'ERROR', payload: { error }});
   }
 }
 
 function* watchSaga() {
-  yield* takeEvery('DO_SOMETHING', promiseSaga);
+  yield* takeEvery('FETCH', promiseSaga);
 }
 
 function* helloSaga() {
