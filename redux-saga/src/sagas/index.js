@@ -1,5 +1,5 @@
 import { takeEvery } from 'redux-saga';
-import { select, put } from 'redux-saga/effects';
+import { fork, select, put } from 'redux-saga/effects';
 
 function* selectSaga(action) {
   const api = yield select(state => state.api);
@@ -36,9 +36,7 @@ function* helloSaga() {
 }
 
 export default function* rootSaga() {
-  yield [
-    helloSaga(),
-    watchSaga(),
-    selectSaga()
-  ];
+  yield fork(helloSaga);
+  yield fork(watchSaga);
+  yield fork(selectSaga);
 }
