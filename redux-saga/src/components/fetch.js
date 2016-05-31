@@ -22,7 +22,10 @@ class Fetch extends React.Component {
       <div>
         <button type="button" onClick={ this.handleClick }>fetch api</button>
         <State />
-        <pre>{ this.props.api.data }</pre>
+        <h2>data</h2>
+        <pre style={{padding: '10px', background: '#eee'}}>{ JSON.stringify(this.props.api.data) }</pre>
+        <h2>error</h2>
+        <pre style={{padding: '10px', background: '#eee'}}>{ JSON.stringify(this.props.api.error) }</pre>
       </div>
     );
   }

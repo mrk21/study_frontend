@@ -9,7 +9,7 @@ export default function api(state = initialState, action) {
     case 'RECEIVE':
       return Object.assign({}, state, action.payload, {error: initialState.error, state: 'received'});
     case 'ERROR':
-      return Object.assign({}, state, action.payload, {state: 'error'});
+      return Object.assign({}, state, action.payload, {data: initialState.data, state: 'error'});
     case 'FETCH':
       return Object.assign({}, state, {state: 'fetching'});
     default:
