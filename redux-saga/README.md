@@ -55,6 +55,8 @@ Babel => JS
 * redux-saga
     * [yelouafi/redux-saga: An alternative side effect model for Redux apps](https://github.com/yelouafi/redux-saga)
     * [Read Me | redux-saga](http://yelouafi.github.io/redux-saga/index.html)
+    * [redux-sagaで非同期処理を試してみた - Qiita - Vimperator](http://qiita.com/wadahiro/items/4071f214ffddd701d299)
+    * [redux-sagaで非同期処理と戦う - Qiita](http://qiita.com/kuy/items/716affc808ebb3e1e8ac)
 
 ### Gulp
 
