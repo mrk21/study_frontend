@@ -1,5 +1,5 @@
 import { delay } from 'redux-saga';
-import { spawn, fork, join, call } from 'redux-saga/effects';
+import { spawn, fork, join, call, cancel } from 'redux-saga/effects';
 
 function func() {
   console.log(1.5);
@@ -39,4 +39,11 @@ export default function* api() {
   task = yield spawn(generator, 'spawn(generator) and join(task)');
   yield join(task);
   console.log(yield '} <- spawn(generator) and join(task)');
+  
+  console.log('fork(generator) and cancel(task) -> {');
+  task = yield fork(generator, 'fork(generator) and cancel(task)');
+  yield call(delay, 500)
+  yield cancel(task);
+  console.log(yield '} <- fork(generator) and cancel(task)');
+  
 }
