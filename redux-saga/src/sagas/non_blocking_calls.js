@@ -8,7 +8,7 @@ function func() {
 function* generator(i) {
   yield call(delay, 1000);
   console.log(yield `-- ${i}`);
-  yield call(childGenerator, i);
+  yield* childGenerator(i);
 }
 
 function* childGenerator(i) {
@@ -16,7 +16,7 @@ function* childGenerator(i) {
   console.log(yield `---- ${i}`);
 }
 
-export default function* api() {
+export default function* nonBlockingCalls() {
   console.log(yield 'call(func) -> {');
   yield call(func);
   console.log(yield '} <- call(func)');
@@ -42,8 +42,13 @@ export default function* api() {
   
   console.log('fork(generator) and cancel(task) -> {');
   task = yield fork(generator, 'fork(generator) and cancel(task)');
-  yield call(delay, 500)
+  yield call(delay, 1500)
   yield cancel(task);
   console.log(yield '} <- fork(generator) and cancel(task)');
   
+  console.log('spawn(generator) and cancel(task) -> {');
+  task = yield spawn(generator, 'spawn(generator) and cancel(task)');
+  yield call(delay, 1500)
+  yield cancel(task);
+  console.log(yield '} <- spawn(generator) and cancel(task)');
 }
