@@ -1,8 +1,12 @@
 import { delay } from 'redux-saga';
-import { spawn, fork, join, call, cancel } from 'redux-saga/effects';
+import { spawn, fork, join, call, cancel, cps } from 'redux-saga/effects';
 
 function func() {
   console.log(1.5);
+}
+
+function cpsFunc(arg1, callback) {
+  callback(null, `-- ${arg1}`);
 }
 
 function* generator(i) {
@@ -51,4 +55,10 @@ export default function* nonBlockingCalls() {
   yield call(delay, 1500)
   yield cancel(task);
   console.log(yield '} <- spawn(generator) and cancel(task)');
+  
+  // CPS: Continuation Passing Style
+  console.log('cps(cpsFunc) -> {');
+  const cpsResult = yield cps(cpsFunc, 'cps(cpsFunc)');
+  console.log(`cpsResult: ${cpsResult}`);
+  console.log(yield '} <- cps(cpsFunc)');
 }
