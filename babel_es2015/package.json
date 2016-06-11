@@ -1,7 +1,7 @@
 {
-  "name": "react_redux",
+  "name": "babel_es2015",
   "version": "1.0.0",
-  "description": "Babel + React + Redux",
+  "description": "Babel ES2015",
   "repository": "https://github.com/mrk21/study_frontend",
   "main": "index.js",
   "scripts": {
