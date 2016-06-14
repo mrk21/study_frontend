@@ -1,3 +1,4 @@
+console.group('enhanced_object_literals');
 {
   const proto = {
     protoMethod() {
@@ -31,3 +32,4 @@
   obj.toString();
   console.log(obj.prop_42);
 }
+console.groupEnd();

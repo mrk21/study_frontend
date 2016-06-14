@@ -1,4 +1,4 @@
-// iterator
+console.group('iterator');
 {
   const iterable = {
     values: [1,2,3],
@@ -19,3 +19,4 @@
     console.log(value);
   }
 }
+console.groupEnd();

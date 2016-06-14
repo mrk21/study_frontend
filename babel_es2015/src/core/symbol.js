@@ -1,3 +1,4 @@
+console.group('symbols');
 {
   console.log(`Symbol('test') === Symbol('test') =>`, Symbol('test') === Symbol('test'));
 }
@@ -17,3 +18,4 @@
     console.log('for (const key in obj)', key);
   }
 }
+console.groupEnd();
