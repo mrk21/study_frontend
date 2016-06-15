@@ -1,4 +1,4 @@
-console.group('iterator');
+console.group('iterators');
 {
   const iterable = {
     values: [1,2,3],
