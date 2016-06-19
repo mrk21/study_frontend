@@ -49,6 +49,12 @@ Babel => JS
     * [ES6時代のJavaScript - クックパッド開発者ブログ](http://techlife.cookpad.com/entry/2015/02/02/094607)
     * [tj/co: The ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc)](https://github.com/tj/co)
 
+* set
+    * [Set - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+* map
+    * [Map - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
 ### Gulp
 
 * browser-sync
