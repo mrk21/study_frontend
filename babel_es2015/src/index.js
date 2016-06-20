@@ -4,3 +4,4 @@ import enhancedObjectLiterals from './core/enhanced_object_literals';
 import proxies from './core/proxies';
 import set from './library/set';
 import map from './library/map';
+import weakSet from './library/weak_set';
