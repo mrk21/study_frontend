@@ -59,6 +59,9 @@ Babel => JS
     * [WeakSet - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
     * [ECMAScript 6: maps and sets](http://www.2ality.com/2015/01/es6-maps-sets.html)
 
+* weak map
+    * [WeakMap - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+
 ### Gulp
 
 * browser-sync
