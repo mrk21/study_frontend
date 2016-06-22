@@ -42,6 +42,7 @@ Babel => JS
 * [Direct Proxiesでmethod missing的なことをやる - Qiita](http://qiita.com/hokaccha/items/3a3ea6180e94e70bc335)
 * [【今更ES2015を追ってみるシリーズ 2】Proxy編 - 俺、サービス売って家買うんだ](http://www.ie-kau.net/entry/2015/10/21/【今更ES2015を追ってみるシリーズ_2】Proxy編)
 * [ES2015 (ES6)についてのまとめ - Qiita](http://qiita.com/tuno-tky/items/74ca595a9232bcbcd727)
+* [ECMAScript 2015(ES6)の概要と次世代JavaScriptの新たな機能 | HTML5Experts.jp](https://html5experts.jp/1000ch/16984/)
 
 * generator
     * [ES2015新機能: ジェネレータをマスターしたい - Qiita](http://qiita.com/niisan-tokyo/items/562b1ec8b059b81e6d85)
@@ -61,6 +62,9 @@ Babel => JS
 
 * weak map
     * [WeakMap - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+
+* Reflect API
+    * [Reflect APIが実装された - JS.next](http://js-next.hatenablog.com/entry/2015/03/24/190111)
 
 ### Gulp
 
