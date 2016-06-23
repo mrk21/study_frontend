@@ -25,11 +25,13 @@ console.group('reflect')
   const handler = {
     get(receiver, name) {
       console.log(receiver, name);
+      console.log('Reflect.has(receiver, name)', Reflect.has(receiver, name));
       return Reflect.get(receiver, name);
     }
   };
   const proxy = new Proxy(target, handler);
   console.log(proxy.value1);
+  console.log(proxy.value2);
 }
 console.groupEnd();
 
