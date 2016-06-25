@@ -7,5 +7,6 @@ console.group('reflect')
   console.log("Reflect.has(target, 'value1') =>", Reflect.has(target, 'value1'));
   console.log("Reflect.get(target, 'value1') =>", Reflect.get(target, 'value1'));
   console.log("Reflect.set(target, 'value1', 2) =>", Reflect.set(target, 'value1', 2));
+  console.log("Reflect.deleteProperty(target, 'value1') =>", Reflect.deleteProperty(target, 'value1'));
 }
 console.groupEnd();
