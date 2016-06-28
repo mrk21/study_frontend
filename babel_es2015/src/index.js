@@ -7,4 +7,5 @@ import set from './library/set';
 import map from './library/map';
 import weakSet from './library/weak_set';
 import weakMap from './library/weak_map';
-import strings from './library/strings';
+import stringApi from './library/string_api';
+import arrayApi from './library/array_api';

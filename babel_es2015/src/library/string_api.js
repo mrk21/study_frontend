@@ -1,10 +1,8 @@
-console.group('String')
+console.group('String API')
 console.group('new API')
 {
   console.log("'abcd'.includes('bc') =>", 'abcd'.includes('bc'));
   console.log("'abc'.repeat(3) =>", 'abc'.repeat(3));
-  
-  "𠮷".length == 2
 }
 console.groupEnd();
 
