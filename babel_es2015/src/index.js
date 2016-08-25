@@ -10,3 +10,4 @@ import weakMap from './library/weak_map';
 import stringApi from './library/string_api';
 import arrayApi from './library/array_api';
 import numberApi from './library/number_api';
+import exponentiation from './core/exponentiation'; // ES2016
