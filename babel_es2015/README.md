@@ -66,6 +66,10 @@ Babel => JS
 * Reflect API
     * [Reflect APIが実装された - JS.next](http://js-next.hatenablog.com/entry/2015/03/24/190111)
 
+### ES2016
+
+* [JavaScript最新仕様ES2016がリリース、新機能Array.prototype.includes()メソッドとは一体何か？ - Qiita](http://qiita.com/tonkotsuboy_com/items/e88e4c4d8006ef67782c)
+
 ### Gulp
 
 * browser-sync

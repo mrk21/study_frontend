@@ -9,5 +9,11 @@ console.group('Array API')
   console.log('[...[1,2,3].entries()] =>', [...[1,2,3].entries()]);
   console.log('[...[1,2,3].keys()] =>', [...[1,2,3].keys()]);
   console.log('[...[1,2,3].values()] =>', [...[1,2,3].values()]);
+
+  console.group('ES2016')
+  {
+    console.log('[1,2,3].includes(2) =>', [1,2,3].includes(2));
+  }
+  console.groupEnd();
 }
 console.groupEnd();
