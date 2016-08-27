@@ -1,4 +1,5 @@
 import iterators from './core/iterators';
+import generator from './core/generator';
 import symbols  from './core/symbols';
 import enhancedObjectLiterals from './core/enhanced_object_literals';
 import proxies from './core/proxies';

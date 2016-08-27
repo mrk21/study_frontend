@@ -1,5 +1,4 @@
 console.group('iterators');
-console.group('base');
 {
   const iterable = {
     values: [1,2,3],
@@ -20,21 +19,4 @@ console.group('base');
     console.log(value);
   }
 }
-console.groupEnd();
-
-console.group('generator');
-{
-  const iterable = {
-    values: [1,2,3],
-    
-    [Symbol.iterator]: function* () {
-      for (const value of this.values) yield value;
-    }
-  };
-  
-  for (let value of iterable) {
-    console.log(value);
-  }
-}
-console.groupEnd();
 console.groupEnd();
