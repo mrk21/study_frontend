@@ -21,6 +21,7 @@
     "babel-preset-es2016": "^6.11.3",
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
+    "eslint": "^3.4.0",
     "gulp": "^3.9.1",
     "require-dir": "^0.3.0",
     "webpack": "^1.12.14"
