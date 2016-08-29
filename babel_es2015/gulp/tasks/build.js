@@ -1,8 +1,6 @@
 import gulp from 'gulp';
 import webpack from 'webpack';
 import webpackConfig from 'config/webpack.config';
-import postcss from 'gulp-postcss'
-import autoprefixer from 'autoprefixer';
 
 gulp.task('build', ['build:js','build:html']);
 
