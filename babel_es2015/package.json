@@ -25,6 +25,8 @@
     "del": "^2.2.0",
     "eslint": "^3.4.0",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-plumber": "^1.1.0",
     "require-dir": "^0.3.0",
     "webpack": "^1.12.14"
   }
