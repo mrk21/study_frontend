@@ -74,6 +74,7 @@ Babel => JS
 
 * [ESLint 最初の一歩 - Qiita](http://qiita.com/mysticatea/items/f523dab04a25f617c87d)
 * [[GitHub 奮闘記] gulp で eslint 設定とコード チェック環境の共有 - Qiita](http://qiita.com/ynunokawa/items/5471ff84c83104450ecb)
+* [eslint-config-airbnbの導入 - Qiita](http://qiita.com/bohebohechan/items/0332b557f80150e714de)
 
 ### Gulp
 
