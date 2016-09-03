@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import iterators from './core/iterators';
 import generator from './core/generator';
 import symbols  from './core/symbols';
