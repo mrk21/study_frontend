@@ -3,7 +3,7 @@ import browserSync from 'browser-sync';
 
 const server = browserSync.create();
 
-gulp.task('server', ['build'], () => {
+gulp.task('server', ['lint', 'build'], () => {
   server.init({
     port: 8000,
     browser: 'Google Chrome',
@@ -14,7 +14,6 @@ gulp.task('server', ['build'], () => {
   });
   
   gulp.watch('src/**', () => {
-    gulp.start('lint');
     gulp.start('build', () => {
       server.reload();
     });
