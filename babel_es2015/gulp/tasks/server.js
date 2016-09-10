@@ -14,6 +14,7 @@ gulp.task('server', ['lint', 'build'], () => {
   });
   
   gulp.watch('src/**', () => {
+    gulp.start('lint');
     gulp.start('build', () => {
       server.reload();
     });
