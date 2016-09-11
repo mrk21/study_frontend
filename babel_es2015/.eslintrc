@@ -1,3 +1,13 @@
 {
-  "extends": "airbnb"
+  "extends": [
+    "airbnb"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-alert": 0,
+    "no-console": 0
+  }
 }
