@@ -1,13 +1,16 @@
-{
-  "extends": [
-    "airbnb"
-  ],
-  "env": {
-    "browser": true
-  },
-  "parser": "babel-eslint",
-  "rules": {
-    "no-alert": 0,
-    "no-console": 0
-  }
-}
+---
+extends: airbnb
+
+parser: babel-eslint
+
+env:
+  browser: true
+
+role:
+  no-alert: 0
+  no-console: 0
+
+settings:
+  import/resolver:
+    webpack:
+      config: config/webpack.config.js
