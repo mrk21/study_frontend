@@ -9,6 +9,7 @@ env:
 rules:
   no-alert: 0
   no-console: 0
+  no-lone-blocks: 0
 
 settings:
   import/resolver:
