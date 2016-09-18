@@ -10,6 +10,11 @@ export default {
   output: {
     filename: './dist/app.js'
   },
+  eslint: {
+    configFile: '.eslintrc',
+    failOnWarning: false,
+    failOnError: false,
+  },
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
