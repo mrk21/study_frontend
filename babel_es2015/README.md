@@ -1,6 +1,10 @@
 # Babel ES2015
 
-* Babel
+## How to start
+
+1. `nodenv install`
+2. `npm install`
+3. `npm start`
 
 ## Components
 
