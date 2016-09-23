@@ -3,7 +3,12 @@ import eslint from 'gulp-eslint';
 import plumber from 'gulp-plumber';
 
 gulp.task('lint', () =>
-  gulp.src('src/**/*.js')
+  gulp.src([
+    'src/**/*.js',
+    'gulpfile.babel.js',
+    'gulp/**/*.js',
+    'config/**/*.js',
+  ])
     .pipe(plumber({
       errorHandler: error => {
         console.error(`[task] eslint ${error.plugin}\n${error.message}`);
