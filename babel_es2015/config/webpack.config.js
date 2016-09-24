@@ -1,14 +1,13 @@
-import webpack from 'webpack';
 import path from 'path';
 
 export default {
   entry: './src/index.js',
   cache: true,
   display: {
-    errorDetails: true
+    errorDetails: true,
   },
   output: {
-    filename: './dist/app.js'
+    filename: './dist/app.js',
   },
   eslint: {
     configFile: '.eslintrc',
@@ -17,15 +16,15 @@ export default {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
-    ]
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+    ],
   },
   resolve: {
     root: [
       path.resolve('src'),
-      path.resolve('test')
+      path.resolve('test'),
     ],
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
   },
-  plugins: []
+  plugins: [],
 };
