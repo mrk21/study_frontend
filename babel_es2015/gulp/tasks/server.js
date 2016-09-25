@@ -9,10 +9,10 @@ gulp.task('server', ['lint', 'build'], () => {
     browser: 'Google Chrome',
     server: {
       always: 'index.html',
-      baseDir: 'dist'
-    }
+      baseDir: 'dist',
+    },
   });
-  
+
   gulp.watch('src/**', () => {
     gulp.start('lint');
     gulp.start('build', () => {

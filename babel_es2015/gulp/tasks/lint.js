@@ -12,7 +12,7 @@ gulp.task('lint', () =>
     .pipe(plumber({
       errorHandler: error => {
         console.error(`[task] eslint ${error.plugin}\n${error.message}`);
-      }
+      },
     }))
     .pipe(eslint({ useEslintrc: true }))
     .pipe(eslint.format())
