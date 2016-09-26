@@ -1,3 +1,5 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 

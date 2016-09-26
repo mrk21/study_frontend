@@ -1,6 +1,8 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+
 import gulp from 'gulp';
 import webpack from 'webpack';
-import webpackConfig from 'config/webpack.config';
+import webpackConfig from '../../config/webpack.config';
 
 gulp.task('build', ['build:js', 'build:html']);
 

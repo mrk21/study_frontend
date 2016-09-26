@@ -1,3 +1,5 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+
 import gulp from 'gulp';
 import eslint from 'gulp-eslint';
 import plumber from 'gulp-plumber';
