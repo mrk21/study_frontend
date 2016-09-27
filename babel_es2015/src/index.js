@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import './core/class';
 import './core/iterators';
 import './core/generator';
 import './core/symbols';
