@@ -3,7 +3,8 @@ console.group('Class syntax');
   console.group('ES-next: Stage-2: Class Property Declarations');
   {
     class Hoge {
-      hoge = 1;
+      static hoge = 1;
+      hoge = 2;
       foo = () => this;
     }
     const hoge = new Hoge();
@@ -11,10 +12,12 @@ console.group('Class syntax');
 
     console.log(`
       class Hoge {
-        hoge = 1;
+        static hoge = 1;
+        hoge = 2;
         foo = () => this;
       }
     `);
+    console.log('Hoge.hoge =>', Hoge.hoge);
     console.log('hoge.hoge =>', hoge.hoge);
     console.log('const { foo } = hoge; foo() =>', foo());
   }
