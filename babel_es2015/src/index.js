@@ -4,6 +4,7 @@ import './core/iterators';
 import './core/generator';
 import './core/symbols';
 import './core/enhanced_object_literals';
+import './core/destructuring_assignment';
 import './core/proxies';
 import './core/reflect';
 import './library/set';

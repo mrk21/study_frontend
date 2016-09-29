@@ -81,6 +81,7 @@ Babel => JS
 
 * [hemanth/es-next](https://github.com/hemanth/es-next)
 * [Class Property Declarations](https://github.com/hemanth/es-next#class-property-declarations)
+* [Rest and Spread properties](https://github.com/hemanth/es-next#rest-and-spread-properties)
 
 ### ESLint
 
