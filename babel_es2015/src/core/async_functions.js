@@ -15,5 +15,10 @@ console.group('ES-next: Stage-4: Async Functions');
     }
   }
   asyncFunc();
+
+  async function asyncFunc2() {
+    await Promise.all([1, 2, 3].map(delayedJob));
+  }
+  asyncFunc2();
 }
 console.groupEnd();
