@@ -27,14 +27,20 @@ console.group('ES-next: Stage-4: Async Functions');
         await delayedJob('asyncFunc3', v);
       }
     },
+    async [`${'asyncFunc4'}`]() {
+      for (const v of [1, 2, 3]) {
+        await delayedJob('asyncFunc4', v);
+      }
+    },
   };
   obj.asyncFunc3();
+  obj.asyncFunc4();
 
-  const asyncFunc4 = async () => {
+  const asyncFunc5 = async () => {
     for (const v of [1, 2, 3]) {
-      await delayedJob('asyncFunc4', v);
+      await delayedJob('asyncFunc5', v);
     }
   };
-  asyncFunc4();
+  asyncFunc5();
 }
 console.groupEnd();
