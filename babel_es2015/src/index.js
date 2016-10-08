@@ -6,7 +6,6 @@ import './core/symbols';
 import './core/enhanced_object_literals';
 import './core/destructuring_assignment';
 import asyncFunctions from './core/async_functions';
-asyncFunctions();
 import './core/proxies';
 import './core/reflect';
 import './library/set';
@@ -18,3 +17,4 @@ import './library/array_api';
 import './library/number_api';
 import './core/exponentiation'; // ES2016
 
+asyncFunctions();
