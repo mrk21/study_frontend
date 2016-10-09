@@ -10,6 +10,17 @@ rules:
   no-alert: 0
   no-console: 0
   no-lone-blocks: 0
+  no-inner-declarations: 0
+
+  # HACK: fix the following problem:
+  # 
+  #   eslint/lib/rules/generator-star-spacing.js:68
+  #     while (token.value !== "*") {
+  #                 ^
+  #   TypeError: Cannot read property 'value' of undefined
+  # 
+  # @see https://github.com/babel/babel-eslint/issues/316#issuecomment-233173916
+  generator-star-spacing: 0
 
 settings:
   import/resolver:

@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import './core/class';
 import './core/iterators';
-import './core/generator';
+import generator from './core/generator';
 import './core/symbols';
 import './core/enhanced_object_literals';
 import './core/destructuring_assignment';
@@ -17,4 +17,9 @@ import './library/array_api';
 import './library/number_api';
 import './core/exponentiation'; // ES2016
 
-asyncFunctions();
+async function main() {
+  await generator();
+  await asyncFunctions();
+}
+
+main();

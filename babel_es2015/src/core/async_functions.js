@@ -1,7 +1,3 @@
-/* HACK: @see https://github.com/babel/babel-eslint/issues/316#issuecomment-233173916 */
-/* eslint generator-star-spacing: 0 */
-/* eslint no-inner-declarations: 0 */
-
 export default async function asyncFunctions() {
   console.group('ES-next: Stage-4: Async Functions');
   {
