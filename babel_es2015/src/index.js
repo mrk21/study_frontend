@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-import './core/class';
+import classSyntax from './core/class_syntax';
 import './core/iterators';
 import generator from './core/generator';
 import './core/symbols';
@@ -18,6 +18,7 @@ import './library/number_api';
 import './core/exponentiation'; // ES2016
 
 async function main() {
+  await classSyntax();
   await generator();
   await asyncFunctions();
 }
