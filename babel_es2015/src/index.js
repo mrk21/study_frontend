@@ -4,7 +4,7 @@ import './core/iterators';
 import generator from './core/generator';
 import './core/symbols';
 import './core/enhanced_object_literals';
-import './core/destructuring_assignment';
+import destructuringAssignment from './core/destructuring_assignment';
 import asyncFunctions from './core/async_functions';
 import './core/proxies';
 import './core/reflect';
@@ -20,6 +20,7 @@ import './core/exponentiation'; // ES2016
 async function main() {
   await classSyntax();
   await generator();
+  await destructuringAssignment();
   await asyncFunctions();
 }
 
