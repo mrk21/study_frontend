@@ -3,7 +3,7 @@ import classSyntax from './core/class_syntax';
 import iterators from './core/iterators';
 import generator from './core/generator';
 import symbols from './core/symbols';
-import './core/enhanced_object_literals';
+import enhancedObjectLiterals from './core/enhanced_object_literals';
 import destructuringAssignment from './core/destructuring_assignment';
 import asyncFunctions from './core/async_functions';
 import './core/proxies';
@@ -22,6 +22,7 @@ async function main() {
   await iterators();
   await generator();
   await symbols();
+  await enhancedObjectLiterals();
   await destructuringAssignment();
   await asyncFunctions();
 }
