@@ -6,7 +6,7 @@ import symbols from './core/symbols';
 import enhancedObjectLiterals from './core/enhanced_object_literals';
 import destructuringAssignment from './core/destructuring_assignment';
 import asyncFunctions from './core/async_functions';
-import './core/proxies';
+import proxies from './core/proxies';
 import './core/reflect';
 import './library/set';
 import './library/map';
@@ -25,6 +25,7 @@ async function main() {
   await enhancedObjectLiterals();
   await destructuringAssignment();
   await asyncFunctions();
+  await proxies();
 }
 
 main();
