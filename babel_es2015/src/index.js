@@ -7,7 +7,7 @@ import enhancedObjectLiterals from './core/enhanced_object_literals';
 import destructuringAssignment from './core/destructuring_assignment';
 import asyncFunctions from './core/async_functions';
 import proxies from './core/proxies';
-import './core/reflect';
+import refrect from './core/reflect';
 import './library/set';
 import './library/map';
 import './library/weak_set';
@@ -26,6 +26,7 @@ async function main() {
   await destructuringAssignment();
   await asyncFunctions();
   await proxies();
+  await refrect();
 }
 
 main();
