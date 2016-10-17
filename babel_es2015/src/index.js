@@ -5,13 +5,13 @@ import generator from './core/generator';
 import symbols from './core/symbols';
 import enhancedObjectLiterals from './core/enhanced_object_literals';
 import destructuringAssignment from './core/destructuring_assignment';
-import asyncFunctions from './core/async_functions';
 import proxies from './core/proxies';
 import refrect from './core/reflect';
-import './library/set';
-import './library/map';
-import './library/weak_set';
-import './library/weak_map';
+import set from './library/set';
+import map from './library/map';
+import weakSet from './library/weak_set';
+import weakMap from './library/weak_map';
+import asyncFunctions from './core/async_functions';
 import './library/string_api';
 import './library/array_api';
 import './library/number_api';
@@ -24,9 +24,13 @@ async function main() {
   await symbols();
   await enhancedObjectLiterals();
   await destructuringAssignment();
-  await asyncFunctions();
   await proxies();
   await refrect();
+  await set();
+  await map();
+  await weakSet();
+  await weakMap();
+  await asyncFunctions();
 }
 
 main();
