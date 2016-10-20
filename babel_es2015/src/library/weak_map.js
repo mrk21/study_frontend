@@ -1,4 +1,4 @@
-export default function weakMap() {
+export default function weakMapType() {
   console.group('weak map');
   {
     const weakMap = new WeakMap();

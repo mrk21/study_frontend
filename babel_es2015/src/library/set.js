@@ -1,4 +1,4 @@
-export default function set() {
+export default function setType() {
   console.group('set');
   {
     const set = new Set();

@@ -1,4 +1,4 @@
-export default function weakSet() {
+export default function weakSetType() {
   console.group('weak set');
   {
     const weakSet = new WeakSet();

@@ -1,4 +1,4 @@
-export default function map() {
+export default function mapType() {
   console.group('map');
   {
     const map = new Map();

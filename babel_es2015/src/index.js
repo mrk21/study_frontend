@@ -13,8 +13,8 @@ import weakSet from './library/weak_set';
 import weakMap from './library/weak_map';
 import stringApi from './library/string_api';
 import arrayApi from './library/array_api';
+import numberApi from './library/number_api';
 import asyncFunctions from './core/async_functions';
-import './library/number_api';
 import './core/exponentiation'; // ES2016
 
 async function main() {
@@ -32,6 +32,7 @@ async function main() {
   await weakMap();
   await stringApi();
   await arrayApi();
+  await numberApi();
   await asyncFunctions();
 }
 
