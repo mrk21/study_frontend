@@ -7,6 +7,7 @@ import enhancedObjectLiterals from './core/enhanced_object_literals';
 import destructuringAssignment from './core/destructuring_assignment';
 import proxies from './core/proxies';
 import refrect from './core/reflect';
+import exponentiation from './core/exponentiation'; // ES2016
 import set from './library/set';
 import map from './library/map';
 import weakSet from './library/weak_set';
@@ -15,7 +16,6 @@ import stringApi from './library/string_api';
 import arrayApi from './library/array_api';
 import numberApi from './library/number_api';
 import asyncFunctions from './core/async_functions';
-import './core/exponentiation'; // ES2016
 
 async function main() {
   await classSyntax();
@@ -26,6 +26,7 @@ async function main() {
   await destructuringAssignment();
   await proxies();
   await refrect();
+  await exponentiation();
   await set();
   await map();
   await weakSet();

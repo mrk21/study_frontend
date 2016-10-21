@@ -1,5 +1,7 @@
-console.group('ES2016: Exponentiation');
-{
-  console.log('2 ** 3', 2 ** 3);
+export default function exponentiation() {
+  console.group('ES2016: Exponentiation');
+  {
+    console.log('2 ** 3', 2 ** 3);
+  }
+  console.groupEnd();
 }
-console.groupEnd();
