@@ -83,6 +83,7 @@ Babel => JS
 * [Class Property Declarations](https://github.com/hemanth/es-next#class-property-declarations)
 * [Rest and Spread properties](https://github.com/hemanth/es-next#rest-and-spread-properties)
 * [Async Functions - Qiita](http://qiita.com/berlysia/items/ce14f023f10100e35d35)
+* [Babel6でreact-reduxの@connectを実現する。 - Qiita](http://qiita.com/hikaruworld@github/items/ca0a8c091cd199d1f1bb)
 
 ### ESLint
 
