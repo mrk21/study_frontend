@@ -3,13 +3,17 @@ export default function decorators() {
   {
     console.log(`
       class Hoge {
-        @decorator()
+        @decorator
+        instance = 1;
+
+        @decorator
         method() {
           console.log('Hoge.prototype.method()');
         }
       }
 
-      function decorator() {
+      function decorator(...args) {
+        console.log('decorator()', ...args);
         return (target, key, descriptor) => {
           console.log('decorator(): target =>', target);
           console.log('decorator(): key =>', key);
@@ -19,13 +23,17 @@ export default function decorators() {
     `);
 
     class Hoge {
-      @decorator()
+      @decorator
+      instance = 1;
+
+      @decorator
       method() {
         console.log('Hoge.prototype.method()');
       }
     }
 
-    function decorator() {
+    function decorator(...args) {
+      console.log('decorator()', ...args);
       return (target, key, descriptor) => {
         console.log('decorator(): target =>', target);
         console.log('decorator(): key =>', key);
@@ -35,6 +43,7 @@ export default function decorators() {
 
     const hoge = new Hoge();
     hoge.method();
+    hoge.instance;
   }
   console.groupEnd();
 }
