@@ -2,6 +2,7 @@ export default function decorators() {
   console.group('ES-next: Stage-2: decorators');
   {
     console.group('Base');
+    {
       console.log(`
         class Hoge {
           @decorator
