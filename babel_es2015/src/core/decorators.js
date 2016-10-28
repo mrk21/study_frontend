@@ -49,6 +49,39 @@ export default function decorators() {
       hoge.method();
     }
     console.groupEnd();
+
+    console.group('readonly');
+    {
+      console.log(`
+        class Hoge {
+          @readonly;
+          prop1 = 1;
+        }
+
+        function readonly(target, name, descriptor) {
+          descriptor.writable = false;
+        }
+      `);
+
+      class Hoge {
+        @readonly;
+        prop1 = 1;
+      }
+
+      function readonly(target, name, descriptor) {
+        descriptor.writable = false;
+      }
+
+      const hoge = new Hoge();
+      console.log('hoge.prop1 =>', hoge.prop1);
+      try {
+        console.log('hoge.prop1 = 2');
+        hoge.prop1 = 2;
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    console.groupEnd();
   }
   console.groupEnd();
 }

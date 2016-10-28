@@ -18,25 +18,34 @@ import arrayApi from './library/array_api';
 import numberApi from './library/number_api';
 import asyncFunctions from './core/async_functions';
 
+async function exec(func) {
+  try {
+    await func();
+  } catch (e) {
+    console.error(e);
+    for (let i = 0; i < 10; ++i) console.groupEnd();
+  }
+}
+
 async function main() {
-  await classSyntax();
-  await iterators();
-  await generator();
-  await symbols();
-  await enhancedObjectLiterals();
-  await destructuringAssignment();
-  await proxies();
-  await refrect();
-  await decorators();
-  await exponentiation();
-  await set();
-  await map();
-  await weakSet();
-  await weakMap();
-  await stringApi();
-  await arrayApi();
-  await numberApi();
-  await asyncFunctions();
+  await exec(classSyntax);
+  await exec(iterators);
+  await exec(generator);
+  await exec(symbols);
+  await exec(enhancedObjectLiterals);
+  await exec(destructuringAssignment);
+  await exec(proxies);
+  await exec(refrect);
+  await exec(decorators);
+  await exec(exponentiation);
+  await exec(set);
+  await exec(map);
+  await exec(weakSet);
+  await exec(weakMap);
+  await exec(stringApi);
+  await exec(arrayApi);
+  await exec(numberApi);
+  await exec(asyncFunctions);
 }
 
 main();
