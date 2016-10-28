@@ -84,4 +84,35 @@ export default function decorators() {
     console.groupEnd();
   }
   console.groupEnd();
+
+  console.group('class');
+  {
+    console.log(`
+      @defineMethod('method');
+      class Hoge {}
+
+      function defineMethod(methodName) {
+        return (target, name, descriptor) => {
+          target.prototype[methodName] = () => {
+            console.log('method');
+          };
+        };
+      }
+    `);
+
+    @defineMethod('method')
+    class Hoge {}
+
+    function defineMethod(methodName) {
+      return (target, name, descriptor) => {
+        target.prototype[methodName] = () => {
+          console.log('method');
+        };
+      };
+    }
+
+    const hoge = new Hoge();
+    hoge.method();
+  }
+  console.groupEnd();
 }
