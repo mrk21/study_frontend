@@ -85,6 +85,47 @@ export default function decorators() {
   }
   console.groupEnd();
 
+  console.group('method');
+  {
+    console.log(`
+      class Hoge {
+        @logger
+        method(a, b) {
+          return a * b;
+        }
+      }
+
+      function logger(target, name, descriptor) {
+        const original = descriptor.value;
+
+        descriptor.value = (...args) => {
+          console.log(method: name, args: args);
+          return original.apply(target, args);
+        };
+      }
+    `);
+
+    class Hoge {
+      @logger
+      method(a, b) {
+        return a * b;
+      }
+    }
+
+    function logger(target, name, descriptor) {
+      const original = descriptor.value;
+
+      descriptor.value = (...args) => {
+        console.log(`method: ${name}, args: ${args}`);
+        return original.apply(target, args);
+      };
+    }
+
+    const hoge = new Hoge();
+    console.log(hoge.method(2, 3));
+  }
+  console.groupEnd();
+
   console.group('class');
   {
     console.log(`
