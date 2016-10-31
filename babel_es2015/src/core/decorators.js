@@ -129,28 +129,30 @@ export default function decorators() {
   console.group('class');
   {
     console.log(`
-      @defineMethod('method');
-      class Hoge {}
-
       function defineMethod(methodName) {
         return (target, name, descriptor) => {
+          console.log(target, name, descriptor);
           target.prototype[methodName] = () => {
             console.log('method');
           };
         };
       }
-    `);
 
-    @defineMethod('method')
-    class Hoge {}
+      @defineMethod('method');
+      class Hoge {}
+    `);
 
     function defineMethod(methodName) {
       return (target, name, descriptor) => {
+        console.log(target, name, descriptor);
         target.prototype[methodName] = () => {
           console.log('method');
         };
       };
     }
+
+    @defineMethod('method')
+    class Hoge {}
 
     const hoge = new Hoge();
     hoge.method();
