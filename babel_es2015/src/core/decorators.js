@@ -50,7 +50,7 @@ export default function decorators() {
     }
     console.groupEnd();
 
-    console.group('readonly');
+    console.group('property');
     {
       console.log(`
         class Hoge {
