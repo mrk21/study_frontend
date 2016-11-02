@@ -96,11 +96,11 @@ export default function decorators() {
       }
 
       function logger(target, name, descriptor) {
-        const original = descriptor.value;
+        const original = descriptor.value.bind(this);
 
         descriptor.value = (...args) => {
-          console.log(method: name, args: args);
-          return original.apply(target, args);
+          console.log(method: {name}, args: {args});
+          return original(...args);
         };
       }
     `);
@@ -113,11 +113,11 @@ export default function decorators() {
     }
 
     function logger(target, name, descriptor) {
-      const original = descriptor.value;
+      const original = descriptor.value.bind(this);
 
       descriptor.value = (...args) => {
         console.log(`method: ${name}, args: ${args}`);
-        return original.apply(target, args);
+        return original(...args);
       };
     }
 
