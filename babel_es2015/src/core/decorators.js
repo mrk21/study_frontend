@@ -60,6 +60,7 @@ export default function decorators() {
 
         function readonly(target, name, descriptor) {
           descriptor.writable = false;
+          return descriptor;
         }
       `);
 
@@ -70,6 +71,7 @@ export default function decorators() {
 
       function readonly(target, name, descriptor) {
         descriptor.writable = false;
+        return descriptor;
       }
 
       const hoge = new Hoge();
@@ -102,6 +104,8 @@ export default function decorators() {
           console.log(method: {name}, args: {args});
           return original(...args);
         };
+
+        return descriptor;
       }
     `);
 
@@ -119,6 +123,8 @@ export default function decorators() {
         console.log(`method: ${name}, args: ${args}`);
         return original(...args);
       };
+
+      return descriptor;
     }
 
     const hoge = new Hoge();
@@ -135,6 +141,7 @@ export default function decorators() {
           target.prototype[methodName] = () => {
             console.log('method');
           };
+          return descriptor;
         };
       }
 
@@ -148,6 +155,7 @@ export default function decorators() {
         target.prototype[methodName] = () => {
           console.log('method');
         };
+        return descriptor;
       };
     }
 
