@@ -88,6 +88,7 @@ Babel => JS
 * [Exploring EcmaScript Decorators – Google Developers – Medium](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841)
 * [wycats/javascript-decorators](https://github.com/wycats/javascript-decorators)
 * [jayphelps/core-decorators.js: Library of stage-0 JavaScript decorators (aka ES2016/ES7 decorators but not accurate)](https://github.com/jayphelps/core-decorators.js)
+* [Object.defineProperty() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
 ### ESLint
 
