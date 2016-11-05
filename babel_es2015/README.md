@@ -83,11 +83,17 @@ Babel => JS
 * [Class Property Declarations](https://github.com/hemanth/es-next#class-property-declarations)
 * [Rest and Spread properties](https://github.com/hemanth/es-next#rest-and-spread-properties)
 * [Async Functions - Qiita](http://qiita.com/berlysia/items/ce14f023f10100e35d35)
+
+### decorators
+
 * [Babel6でreact-reduxの@connectを実現する。 - Qiita](http://qiita.com/hikaruworld@github/items/ca0a8c091cd199d1f1bb)
 * [全力で ES Decorator使ってみた - Qiita](http://qiita.com/mizchi/items/6bdf9d100f564a5c5b08)
 * [Exploring EcmaScript Decorators – Google Developers – Medium](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841)
 * [wycats/javascript-decorators](https://github.com/wycats/javascript-decorators)
 * [jayphelps/core-decorators.js: Library of stage-0 JavaScript decorators (aka ES2016/ES7 decorators but not accurate)](https://github.com/jayphelps/core-decorators.js)
+
+#### defineProperty
+
 * [Object.defineProperty() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
 ### ESLint
