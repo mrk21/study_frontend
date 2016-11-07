@@ -169,28 +169,32 @@ export default function decorators() {
 
   console.group('ES5: defineProperty');
   {
-    console.log(`
+    console.group('writable');
+    {
+      console.log(`
+        const obj = {};
+
+        Object.defineProperty(obj, 'a', {
+          value: 1,
+          writable: false,
+        });
+      `);
       const obj = {};
 
       Object.defineProperty(obj, 'a', {
         value: 1,
         writable: false,
       });
-    `);
-    const obj = {};
 
-    Object.defineProperty(obj, 'a', {
-      value: 1,
-      writable: false,
-    });
-
-    console.log('obj.a =>', obj.a);
-    try {
-      console.log('obj.a = 2');
-      obj.a = 2;
-    } catch (e) {
-      console.error(e);
+      console.log('obj.a =>', obj.a);
+      try {
+        console.log('obj.a = 2');
+        obj.a = 2;
+      } catch (e) {
+        console.error(e);
+      }
     }
+    console.groupEnd();
   }
   console.groupEnd();
 }
