@@ -195,6 +195,32 @@ export default function decorators() {
       }
     }
     console.groupEnd();
+
+    console.group('configurable');
+    {
+      console.log(`
+        const obj = {};
+
+        Object.defineProperty(obj, 'a', {
+          value: 1,
+          configurable: false,
+        });
+      `);
+      const obj = {};
+
+      Object.defineProperty(obj, 'a', {
+        value: 1,
+        configurable: false,
+      });
+
+      console.log('delete obj.a');
+      try {
+        delete obj.a;
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    console.groupEnd();
   }
   console.groupEnd();
 }
