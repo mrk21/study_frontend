@@ -221,6 +221,36 @@ export default function decorators() {
       }
     }
     console.groupEnd();
+
+    console.group('enumerable');
+    {
+      console.log(`
+        const obj = {
+          a: 1
+        };
+
+        Object.defineProperty(obj, 'b', {
+          enumerable: false,
+        });
+
+        for (const key in obj) {
+          console.log(key);
+        }
+      `);
+
+      const obj = {
+        a: 1
+      };
+
+      Object.defineProperty(obj, 'b', {
+        enumerable: false,
+      });
+
+      for (const key in obj) {
+        console.log(key);
+      }
+    }
+    console.groupEnd();
   }
   console.groupEnd();
 }
