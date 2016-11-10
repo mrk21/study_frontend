@@ -169,27 +169,44 @@ export default function decorators() {
 
   console.group('ES5: defineProperty');
   {
-    console.group('writable');
+    console.group('value');
     {
       console.log(`
         const obj = {};
 
         Object.defineProperty(obj, 'a', {
           value: 1,
-          writable: false,
         });
       `);
+
       const obj = {};
 
       Object.defineProperty(obj, 'a', {
         value: 1,
-        writable: false,
       });
 
       console.log('obj.a =>', obj.a);
+    }
+
+    console.group('writable');
+    {
+      console.log(`
+        const obj = {};
+
+        Object.defineProperty(obj, 'a', {
+          writable: false,
+        });
+      `);
+
+      const obj = {};
+
+      Object.defineProperty(obj, 'a', {
+        writable: false,
+      });
+
       try {
-        console.log('obj.a = 2');
-        obj.a = 2;
+        console.log('obj.a = 1');
+        obj.a = 1;
       } catch (e) {
         console.error(e);
       }
@@ -202,14 +219,13 @@ export default function decorators() {
         const obj = {};
 
         Object.defineProperty(obj, 'a', {
-          value: 1,
           configurable: false,
         });
       `);
+
       const obj = {};
 
       Object.defineProperty(obj, 'a', {
-        value: 1,
         configurable: false,
       });
 
@@ -226,27 +242,27 @@ export default function decorators() {
     {
       console.log(`
         const obj = {
-          a: 1
+          a: 1,
         };
 
         Object.defineProperty(obj, 'b', {
           enumerable: false,
         });
 
-        for (const key in obj) {
+        for (const key of Object.keys(obj)) {
           console.log(key);
         }
       `);
 
       const obj = {
-        a: 1
+        a: 1,
       };
 
       Object.defineProperty(obj, 'b', {
         enumerable: false,
       });
 
-      for (const key in obj) {
+      for (const key of Object.keys(obj)) {
         console.log(key);
       }
     }
