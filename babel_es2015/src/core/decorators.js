@@ -187,6 +187,27 @@ export default function decorators() {
 
       console.log('obj.a =>', obj.a);
     }
+    console.groupEnd();
+
+    console.group('get');
+    {
+      console.log(`
+        const obj = {};
+
+        Object.defineProperty(obj, 'a', {
+          get() { return 1 },
+        });
+      `);
+
+      const obj = {};
+
+      Object.defineProperty(obj, 'a', {
+        get() { return 1 },
+      });
+
+      console.log('obj.a =>', obj.a);
+    }
+    console.groupEnd();
 
     console.group('writable');
     {
