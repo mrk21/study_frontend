@@ -202,7 +202,7 @@ export default function decorators() {
       const obj = {};
 
       Object.defineProperty(obj, 'a', {
-        get() { return 1 },
+        get() { return 1; },
       });
 
       console.log('obj.a =>', obj.a);
