@@ -209,6 +209,33 @@ export default function decorators() {
     }
     console.groupEnd();
 
+    console.group('set');
+    {
+      console.log(`
+        const obj = {
+          _a: 1,
+        };
+
+        Object.defineProperty(obj, 'a', {
+          set(newValue) { this._a = newValue; },
+        });
+      `);
+
+      const obj = {
+        _a: 1,
+      };
+
+      Object.defineProperty(obj, 'a', {
+        set(newValue) { this._a = newValue; },
+      });
+
+      console.log('obj._a =>', obj._a);
+      console.log('obj.a = 2');
+      obj.a = 2;
+      console.log('obj._a =>', obj._a);
+    }
+    console.groupEnd();
+
     console.group('writable');
     {
       console.log(`
