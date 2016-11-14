@@ -59,8 +59,8 @@ export default function decorators() {
         }
 
         function readonly(target, name, descriptor) {
-          descriptor.writable = false;
-          return descriptor;
+          const newDescriptor = { ...descriptor, writable: false };
+          return newDescriptor;
         }
       `);
 
@@ -70,8 +70,8 @@ export default function decorators() {
       }
 
       function readonly(target, name, descriptor) {
-        descriptor.writable = false;
-        return descriptor;
+        const newDescriptor = { ...descriptor, writable: false };
+        return newDescriptor;
       }
 
       const hoge = new Hoge();
@@ -119,12 +119,14 @@ export default function decorators() {
     function logger(target, name, descriptor) {
       const original = descriptor.value.bind(this);
 
-      descriptor.value = (...args) => {
-        console.log(`method: ${name}, args: ${args}`);
-        return original(...args);
+      const newDescriptor = { ...descriptor,
+        value(...args) {
+          console.log(`method: ${name}, args: ${args}`);
+          return original(...args);
+        },
       };
 
-      return descriptor;
+      return newDescriptor;
     }
 
     const hoge = new Hoge();
@@ -138,9 +140,11 @@ export default function decorators() {
       function defineMethod(methodName) {
         return (target, name, descriptor) => {
           console.log(target, name, descriptor);
-          target.prototype[methodName] = () => {
-            console.log('method');
-          };
+          Object.assign(target.prototype, {
+            [methodName]() {
+              console.log('method');
+            },
+          });
           return descriptor;
         };
       }
@@ -152,9 +156,11 @@ export default function decorators() {
     function defineMethod(methodName) {
       return (target, name, descriptor) => {
         console.log(target, name, descriptor);
-        target.prototype[methodName] = () => {
-          console.log('method');
-        };
+        Object.assign(target.prototype, {
+          [methodName]() {
+            console.log('method');
+          },
+        });
         return descriptor;
       };
     }

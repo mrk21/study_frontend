@@ -22,8 +22,6 @@ rules:
   # @see https://github.com/babel/babel-eslint/issues/316#issuecomment-233173916
   generator-star-spacing: 0
 
-  no-param-reassign: 0
-
 settings:
   import/resolver:
     webpack:
