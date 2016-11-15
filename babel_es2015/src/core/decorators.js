@@ -219,26 +219,26 @@ export default function decorators() {
     {
       console.log(`
         const obj = {
-          _a: 1,
+          privateA: 1,
         };
 
         Object.defineProperty(obj, 'a', {
-          set(newValue) { this._a = newValue; },
+          set(newValue) { this.privateA = newValue; },
         });
       `);
 
       const obj = {
-        _a: 1,
+        privateA: 1,
       };
 
       Object.defineProperty(obj, 'a', {
-        set(newValue) { this._a = newValue; },
+        set(newValue) { this.privateA = newValue; },
       });
 
-      console.log('obj._a =>', obj._a);
+      console.log('obj.privateA =>', obj.privateA);
       console.log('obj.a = 2');
       obj.a = 2;
-      console.log('obj._a =>', obj._a);
+      console.log('obj.privateA =>', obj.privateA);
     }
     console.groupEnd();
 
