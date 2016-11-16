@@ -1,4 +1,6 @@
 import webpack from 'webpack';
+import postcssImport from 'postcss-import';
+import postcssCssnext from 'postcss-cssnext';
 import path from 'path';
 
 export default {
@@ -12,15 +14,33 @@ export default {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
-    ]
+      // javascripts
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      // stylesheets
+      {
+        test: /\.css$/,
+        loaders: [
+          'style?sourceMap',
+          'css?importLoaders=1',
+          'postcss',
+        ],
+      },
+    ],
   },
   resolve: {
     root: [
       path.resolve('src'),
       path.resolve('test')
     ],
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.css']
   },
+  postcss: [
+    postcssImport(),
+    postcssCssnext(),
+  ],
   plugins: []
 };
