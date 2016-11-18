@@ -47,3 +47,7 @@ PostCSS + cssnext
 * [PostCSSで簡単なプラグインを作ってみよう - Qiita](http://qiita.com/naoyashiga/items/f53ddb3d3c8436ac8add)
 * [postcss/writing-a-plugin.md at master · postcss/postcss](https://github.com/postcss/postcss/blob/master/docs/writing-a-plugin.md)
 * [Containers: common methods - postcss/api.md at master · postcss/postcss](https://github.com/postcss/postcss/blob/master/docs/api.md#containers-common-methods)
+
+### PostCSS Loader
+
+* [postcss/postcss-loader: PostCSS loader for webpack](https://github.com/postcss/postcss-loader)
