@@ -42,13 +42,13 @@ PostCSS + cssnext
 * [CSS font-variant property](http://www.w3schools.com/cssref/pr_font_font-variant.asp)
 * [HTML5 & CSS3 リファレンス - font-variant プロパティ（フォント変換の規則の一括指定）](http://www.osaka-kyoiku.ac.jp/~joho/html5_ref/css/font-variant_css.php?menutype=2dtaldl01l02l03A0)
 
-### PostCSS Plugin
+### PostCSS
 
 * [PostCSSで簡単なプラグインを作ってみよう - Qiita](http://qiita.com/naoyashiga/items/f53ddb3d3c8436ac8add)
 * [postcss/writing-a-plugin.md at master · postcss/postcss](https://github.com/postcss/postcss/blob/master/docs/writing-a-plugin.md)
 * [Containers: common methods - postcss/api.md at master · postcss/postcss](https://github.com/postcss/postcss/blob/master/docs/api.md#containers-common-methods)
 * [css-modules/postcss-modules: PostCSS plugin to use CSS Modules everywhere](https://github.com/css-modules/postcss-modules)
-
-### PostCSS Loader
-
+* [postcss/postcss-import: PostCSS plugin to inline @import rules content](https://github.com/postcss/postcss-import)
 * [postcss/postcss-loader: PostCSS loader for webpack](https://github.com/postcss/postcss-loader)
+* [PostCSSの基本的なプラグインについて - Qiita](http://qiita.com/hbsnow/items/3193f7576cbec0a5765e)
+* [PostCSSとcssnextで最新CSS仕様を先取り！ | HTML5Experts.jp](https://html5experts.jp/t32k/17235/)
