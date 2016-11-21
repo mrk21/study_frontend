@@ -1,3 +1,5 @@
+@import "common.css"; /* for postcss-import */
+
 /* CSS Next */
 /* Auto prefixer (polyfill) */
 .auto-prefixer {
@@ -151,4 +153,9 @@
 .my-plugin {
   font-weight: bold;
   custom-background: 💩;
+}
+
+/* postcss import */
+.postcss-import {
+  font-size: var(--font-size2);
 }
