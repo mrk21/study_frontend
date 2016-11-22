@@ -52,3 +52,8 @@ PostCSS + cssnext
 * [postcss/postcss-loader: PostCSS loader for webpack](https://github.com/postcss/postcss-loader)
 * [PostCSSの基本的なプラグインについて - Qiita](http://qiita.com/hbsnow/items/3193f7576cbec0a5765e)
 * [PostCSSとcssnextで最新CSS仕様を先取り！ | HTML5Experts.jp](https://html5experts.jp/t32k/17235/)
+
+### webpack loader
+
+* [webpack/style-loader: style loader module for webpack](https://github.com/webpack/style-loader)
+* [style-loaderを使ってstylesheetをrequireする - Qiita](http://qiita.com/nekobato/items/43122e0ff7d260b2b0cc)
