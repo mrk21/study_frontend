@@ -13,6 +13,7 @@ PostCSS + cssnext
 * [postcss/postcss-custom-properties: PostCSS plugin to transform W3C CSS Custom Properties for cascading variables](https://github.com/postcss/postcss-custom-properties)
 * [cssnext - Use tomorrow’s CSS syntax, today.](http://cssnext.io/)
 * [cssnextでみる次世代CSSとPostCSS | Yucchiy's blog](http://blog.yucchiy.com/2015/04/22/cssnext-postcss-for-nextgeneration-of-css/)
+* [cssnextから学ぶ次世代CSS - Qiita](http://qiita.com/howdy39/items/92a7de771bbea99dbc7c)
 
 ### CSS Next
 
@@ -49,11 +50,12 @@ PostCSS + cssnext
 * [Containers: common methods - postcss/api.md at master · postcss/postcss](https://github.com/postcss/postcss/blob/master/docs/api.md#containers-common-methods)
 * [css-modules/postcss-modules: PostCSS plugin to use CSS Modules everywhere](https://github.com/css-modules/postcss-modules)
 * [postcss/postcss-import: PostCSS plugin to inline @import rules content](https://github.com/postcss/postcss-import)
-* [postcss/postcss-loader: PostCSS loader for webpack](https://github.com/postcss/postcss-loader)
 * [PostCSSの基本的なプラグインについて - Qiita](http://qiita.com/hbsnow/items/3193f7576cbec0a5765e)
 * [PostCSSとcssnextで最新CSS仕様を先取り！ | HTML5Experts.jp](https://html5experts.jp/t32k/17235/)
 
 ### webpack loader
 
+* [webpack/css-loader: css loader module for webpack](https://github.com/webpack/css-loader)
 * [webpack/style-loader: style loader module for webpack](https://github.com/webpack/style-loader)
+* [postcss/postcss-loader: PostCSS loader for webpack](https://github.com/postcss/postcss-loader)
 * [style-loaderを使ってstylesheetをrequireする - Qiita](http://qiita.com/nekobato/items/43122e0ff7d260b2b0cc)
