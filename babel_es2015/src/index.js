@@ -16,6 +16,7 @@ import weakMap from './library/weak_map';
 import stringApi from './library/string_api';
 import arrayApi from './library/array_api';
 import numberApi from './library/number_api';
+import functionParameters from './core/function_parameters.js';
 import asyncFunctions from './core/async_functions';
 
 async function exec(func) {
@@ -45,6 +46,7 @@ async function main() {
   await exec(stringApi);
   await exec(arrayApi);
   await exec(numberApi);
+  await exec(functionParameters);
   await exec(asyncFunctions);
 }
 
