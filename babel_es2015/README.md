@@ -103,6 +103,11 @@ Babel => JS
 * [eslint-config-airbnbの導入 - Qiita](http://qiita.com/bohebohechan/items/0332b557f80150e714de)
 * [ESLintについてのメモ - Qiita](http://qiita.com/makotot/items/822f592ff8470408be18)
 
+#### Stage-2: function.sent Meta Property
+
+* [function.sentメタプロパティが実装された - JS.next](http://js-next.hatenablog.com/entry/2016/01/29/184411)
+* [Syntax function.sent · Babel](https://babeljs.io/docs/plugins/syntax-function-sent/)
+
 #### babel-eslint
 
 * [サイでもわかる？！ ESLint 導入 - |> Weeeeeeb](http://kuriya0909.hatenablog.com/entry/2015/11/13/105846)
