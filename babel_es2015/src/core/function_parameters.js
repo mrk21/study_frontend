@@ -1,4 +1,4 @@
-export default function symbols() {
+export default function functionParameters() {
   console.group('ES-Next: Stage-4: Trailing commas in function parameter lists and calls');
   {
     console.log(`

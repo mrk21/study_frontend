@@ -84,12 +84,29 @@ export default function decorators() {
       }
     }
     console.groupEnd();
-  }
-  console.groupEnd();
 
-  console.group('method');
-  {
-    console.log(`
+    console.group('method');
+    {
+      console.log(`
+        class Hoge {
+          @logger
+          method(a, b) {
+            return a * b;
+          }
+        }
+
+        function logger(target, name, descriptor) {
+          const original = descriptor.value.bind(this);
+
+          descriptor.value = (...args) => {
+            console.log(method: {name}, args: {args});
+            return original(...args);
+          };
+
+          return descriptor;
+        }
+      `);
+
       class Hoge {
         @logger
         method(a, b) {
@@ -100,43 +117,40 @@ export default function decorators() {
       function logger(target, name, descriptor) {
         const original = descriptor.value.bind(this);
 
-        descriptor.value = (...args) => {
-          console.log(method: {name}, args: {args});
-          return original(...args);
+        const newDescriptor = { ...descriptor,
+          value(...args) {
+            console.log(`method: ${name}, args: ${args}`);
+            return original(...args);
+          },
         };
 
-        return descriptor;
+        return newDescriptor;
       }
-    `);
 
-    class Hoge {
-      @logger
-      method(a, b) {
-        return a * b;
-      }
+      const hoge = new Hoge();
+      console.log(hoge.method(2, 3));
     }
+    console.groupEnd();
 
-    function logger(target, name, descriptor) {
-      const original = descriptor.value.bind(this);
+    console.group('class');
+    {
+      console.log(`
+        function defineMethod(methodName) {
+          return (target, name, descriptor) => {
+            console.log(target, name, descriptor);
+            Object.assign(target.prototype, {
+              [methodName]() {
+                console.log('method');
+              },
+            });
+            return descriptor;
+          };
+        }
 
-      const newDescriptor = { ...descriptor,
-        value(...args) {
-          console.log(`method: ${name}, args: ${args}`);
-          return original(...args);
-        },
-      };
+        @defineMethod('method');
+        class Hoge {}
+      `);
 
-      return newDescriptor;
-    }
-
-    const hoge = new Hoge();
-    console.log(hoge.method(2, 3));
-  }
-  console.groupEnd();
-
-  console.group('class');
-  {
-    console.log(`
       function defineMethod(methodName) {
         return (target, name, descriptor) => {
           console.log(target, name, descriptor);
@@ -149,27 +163,13 @@ export default function decorators() {
         };
       }
 
-      @defineMethod('method');
+      @defineMethod('method')
       class Hoge {}
-    `);
 
-    function defineMethod(methodName) {
-      return (target, name, descriptor) => {
-        console.log(target, name, descriptor);
-        Object.assign(target.prototype, {
-          [methodName]() {
-            console.log('method');
-          },
-        });
-        return descriptor;
-      };
+      const hoge = new Hoge();
+      hoge.method();
     }
-
-    @defineMethod('method')
-    class Hoge {}
-
-    const hoge = new Hoge();
-    hoge.method();
+    console.groupEnd();
   }
   console.groupEnd();
 
