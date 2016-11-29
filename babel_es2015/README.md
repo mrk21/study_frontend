@@ -108,7 +108,7 @@ Babel => JS
 * [function.sentメタプロパティが実装された - JS.next](http://js-next.hatenablog.com/entry/2016/01/29/184411)
 * [Syntax function.sent · Babel](https://babeljs.io/docs/plugins/syntax-function-sent/)
 
-#### Stage-3: System.global
+#### Stage-3: global
 
 * [System.global (ES.next stage1) - Qiita](http://qiita.com/ConquestArrow/items/f303ce0990049c8c9946)
 
