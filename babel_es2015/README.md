@@ -111,6 +111,7 @@ Babel => JS
 #### Stage-3: global
 
 * [System.global (ES.next stage1) - Qiita](http://qiita.com/ConquestArrow/items/f303ce0990049c8c9946)
+* [tc39/proposal-global: ECMAScript Proposal, specs, and reference implementation for `global`](https://github.com/tc39/proposal-global)
 
 #### babel-eslint
 
