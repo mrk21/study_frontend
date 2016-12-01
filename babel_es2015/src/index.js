@@ -8,6 +8,7 @@ import destructuringAssignment from './core/destructuring_assignment';
 import proxies from './core/proxies';
 import refrect from './core/reflect';
 import decorators from './core/decorators'; // ES-next: stage-2
+import templateLiteral from './core/template_literal';
 import exponentiation from './core/exponentiation'; // ES2016
 import global from './core/global'; // ES-next: stage-3
 import functionParameters from './core/function_parameters.js'; // ES-next: stage-4
@@ -39,6 +40,7 @@ async function main() {
   await exec(proxies);
   await exec(refrect);
   await exec(decorators);
+  await exec(templateLiteral);
   await exec(exponentiation);
   await exec(global);
   await exec(functionParameters);

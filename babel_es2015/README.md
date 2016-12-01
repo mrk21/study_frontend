@@ -84,6 +84,22 @@ Babel => JS
 * [Rest and Spread properties](https://github.com/hemanth/es-next#rest-and-spread-properties)
 * [Async Functions - Qiita](http://qiita.com/berlysia/items/ce14f023f10100e35d35)
 
+#### Stage-2: Template literal Revision
+
+* [tc39/proposal-template-literal-revision](https://github.com/tc39/proposal-template-literal-revision)
+* [ES proposal: Template Literal Revision](http://www.2ality.com/2016/09/template-literal-revision.html)
+* [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/)
+
+#### Stage-2: function.sent Meta Property
+
+* [function.sentメタプロパティが実装された - JS.next](http://js-next.hatenablog.com/entry/2016/01/29/184411)
+* [Syntax function.sent · Babel](https://babeljs.io/docs/plugins/syntax-function-sent/)
+
+#### Stage-3: global
+
+* [System.global (ES.next stage1) - Qiita](http://qiita.com/ConquestArrow/items/f303ce0990049c8c9946)
+* [tc39/proposal-global: ECMAScript Proposal, specs, and reference implementation for `global`](https://github.com/tc39/proposal-global)
+
 ### decorators
 
 * [Babel6でreact-reduxの@connectを実現する。 - Qiita](http://qiita.com/hikaruworld@github/items/ca0a8c091cd199d1f1bb)
@@ -102,16 +118,6 @@ Babel => JS
 * [[GitHub 奮闘記] gulp で eslint 設定とコード チェック環境の共有 - Qiita](http://qiita.com/ynunokawa/items/5471ff84c83104450ecb)
 * [eslint-config-airbnbの導入 - Qiita](http://qiita.com/bohebohechan/items/0332b557f80150e714de)
 * [ESLintについてのメモ - Qiita](http://qiita.com/makotot/items/822f592ff8470408be18)
-
-#### Stage-2: function.sent Meta Property
-
-* [function.sentメタプロパティが実装された - JS.next](http://js-next.hatenablog.com/entry/2016/01/29/184411)
-* [Syntax function.sent · Babel](https://babeljs.io/docs/plugins/syntax-function-sent/)
-
-#### Stage-3: global
-
-* [System.global (ES.next stage1) - Qiita](http://qiita.com/ConquestArrow/items/f303ce0990049c8c9946)
-* [tc39/proposal-global: ECMAScript Proposal, specs, and reference implementation for `global`](https://github.com/tc39/proposal-global)
 
 #### babel-eslint
 
