@@ -1,4 +1,4 @@
-export default function global() {
+export default function globalVariable() {
   console.group('ES-Next: Stage-3: global');
   {
     console.log('global.window =>', global.window);

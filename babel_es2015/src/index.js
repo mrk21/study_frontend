@@ -10,7 +10,7 @@ import refrect from './core/reflect';
 import decorators from './core/decorators'; // ES-next: stage-2
 import templateLiteral from './core/template_literal';
 import exponentiation from './core/exponentiation'; // ES2016
-import global from './core/global'; // ES-next: stage-3
+import globalVariable from './core/global'; // ES-next: stage-3
 import functionParameters from './core/function_parameters.js'; // ES-next: stage-4
 import set from './library/set';
 import map from './library/map';
@@ -42,7 +42,7 @@ async function main() {
   await exec(decorators);
   await exec(templateLiteral);
   await exec(exponentiation);
-  await exec(global);
+  await exec(globalVariable);
   await exec(functionParameters);
   await exec(set);
   await exec(map);
