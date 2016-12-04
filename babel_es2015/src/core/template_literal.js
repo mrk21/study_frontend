@@ -3,7 +3,7 @@ export default function templateLiteral() {
   {
     console.group('ES-next: Stage-2: Template Literal Revision');
     {
-      function tagFunc(tmplObj, substs) {
+      function tagFunc(tmplObj) {
         return {
           Cooked: tmplObj,
           Raw: tmplObj.raw,
