@@ -42,36 +42,46 @@ Babel => JS
 * [ES2015 (ES6)についてのまとめ - Qiita](http://qiita.com/tuno-tky/items/74ca595a9232bcbcd727)
 * [ECMAScript 2015(ES6)の概要と次世代JavaScriptの新たな機能 | HTML5Experts.jp](https://html5experts.jp/1000ch/16984/)
 
-* iterator/generator/symbol
-    * [JavaScript の イテレータ を極める！ - Qiita](http://qiita.com/kura07/items/cf168a7ea20e8c2554c6)
-    * [JavaScript の ジェネレータ を極める！ - Qiita](http://qiita.com/kura07/items/d1a57ea64ef5c3de8528)
-    * [ES2015新機能: ジェネレータをマスターしたい - Qiita](http://qiita.com/niisan-tokyo/items/562b1ec8b059b81e6d85)
-    * [最近のjs非同期処理 PromiseとGeneratorの共存 - Qiita](http://qiita.com/kidach1/items/d997df84a0ede39d76ad)
-    * [ES6時代のJavaScript - クックパッド開発者ブログ](http://techlife.cookpad.com/entry/2015/02/02/094607)
-    * [tj/co: The ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc)](https://github.com/tj/co)
-    * [ES6, ES2015 : for..of loop](http://putaindecode.io/en/articles/js/es2015/for-of/)
-    * [ECMAScript6にシンボルができた理由 - Qiita](http://qiita.com/naruto/items/312adeb6145eb6221be7)
+#### iterator/generator/symbol
 
-* set
-    * [Set - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Set)
+* [JavaScript の イテレータ を極める！ - Qiita](http://qiita.com/kura07/items/cf168a7ea20e8c2554c6)
+* [JavaScript の ジェネレータ を極める！ - Qiita](http://qiita.com/kura07/items/d1a57ea64ef5c3de8528)
+* [ES2015新機能: ジェネレータをマスターしたい - Qiita](http://qiita.com/niisan-tokyo/items/562b1ec8b059b81e6d85)
+* [最近のjs非同期処理 PromiseとGeneratorの共存 - Qiita](http://qiita.com/kidach1/items/d997df84a0ede39d76ad)
+* [ES6時代のJavaScript - クックパッド開発者ブログ](http://techlife.cookpad.com/entry/2015/02/02/094607)
+* [tj/co: The ultimate generator based flow-control goodness for nodejs (supports thunks, promises, etc)](https://github.com/tj/co)
+* [ES6, ES2015 : for..of loop](http://putaindecode.io/en/articles/js/es2015/for-of/)
+* [ECMAScript6にシンボルができた理由 - Qiita](http://qiita.com/naruto/items/312adeb6145eb6221be7)
 
-* map
-    * [Map - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Map)
+#### set
 
-* weak set
-    * [WeakSet - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
-    * [ECMAScript 6: maps and sets](http://www.2ality.com/2015/01/es6-maps-sets.html)
+* [Set - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
-* weak map
-    * [WeakMap - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+#### map
 
-* proxy
-    * [Direct Proxiesでmethod missing的なことをやる - Qiita](http://qiita.com/hokaccha/items/3a3ea6180e94e70bc335)
-    * [【今更ES2015を追ってみるシリーズ 2】Proxy編 - 俺、サービス売って家買うんだ](http://www.ie-kau.net/entry/2015/10/21/【今更ES2015を追ってみるシリーズ_2】Proxy編)
-    * [Proxy - Learn ES2015 · Babel](http://babeljs.io/docs/learn-es2015/#proxies)
+* [Map - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
-* Reflect API
-    * [Reflect APIが実装された - JS.next](http://js-next.hatenablog.com/entry/2015/03/24/190111)
+#### weak set
+
+* [WeakSet - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+* [ECMAScript 6: maps and sets](http://www.2ality.com/2015/01/es6-maps-sets.html)
+
+#### weak map
+
+* [WeakMap - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+
+#### proxy
+
+* [Direct Proxiesでmethod missing的なことをやる - Qiita](http://qiita.com/hokaccha/items/3a3ea6180e94e70bc335)
+* [【今更ES2015を追ってみるシリーズ 2】Proxy編 - 俺、サービス売って家買うんだ](http://www.ie-kau.net/entry/2015/10/21/【今更ES2015を追ってみるシリーズ_2】Proxy編)
+* [Proxy - Learn ES2015 · Babel](http://babeljs.io/docs/learn-es2015/#proxies)
+
+#### Reflect API
+* [Reflect APIが実装された - JS.next](http://js-next.hatenablog.com/entry/2015/03/24/190111)
+
+#### ArrayBuffer/ArrayBufferView
+
+* [ArrayBuffer - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 
 ### ES2016
 

@@ -12,6 +12,7 @@ import templateLiteral from './core/template_literal';
 import exponentiation from './core/exponentiation'; // ES2016
 import globalVariable from './core/global'; // ES-next: stage-3
 import functionParameters from './core/function_parameters'; // ES-next: stage-4
+import arrayBuffer from './library/array_buffer';
 import sharedMemoryAndAtomics from './core/shared_memory_and_atomics'; // ES-next stage-2
 import set from './library/set';
 import map from './library/map';
@@ -45,6 +46,7 @@ async function main() {
   await exec(exponentiation);
   await exec(globalVariable);
   await exec(functionParameters);
+  await exec(arrayBuffer);
   await exec(sharedMemoryAndAtomics);
   await exec(set);
   await exec(map);
