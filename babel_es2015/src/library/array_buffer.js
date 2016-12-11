@@ -22,6 +22,22 @@ export default function arrayBuffer() {
       }
     }
     console.groupEnd();
+
+    console.group('buffer sharing');
+    {
+      const buffer = new ArrayBuffer(2); // 2 bytes
+      {
+        const view = new Uint8Array(buffer);
+        view[1] = 0x80;
+        view[0] = 0x01;
+        console.log(view);
+      }
+      {
+        const view = new Int16Array(buffer);
+        console.log(view);
+      }
+    }
+    console.groupEnd();
   }
   console.groupEnd();
 }
