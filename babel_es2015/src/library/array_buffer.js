@@ -38,6 +38,17 @@ export default function arrayBuffer() {
       }
     }
     console.groupEnd();
+
+    console.group('DataView');
+    {
+      const buffer = new ArrayBuffer(2); // 2 bytes
+      const view = new DataView(buffer);
+      view.setUint8(0, 0xFF);
+      view.setUint8(1, 0xFF);
+      console.log(view.getInt16(0));
+
+    }
+    console.groupEnd();
   }
   console.groupEnd();
 }

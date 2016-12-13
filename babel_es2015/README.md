@@ -77,11 +77,14 @@ Babel => JS
 * [Proxy - Learn ES2015 · Babel](http://babeljs.io/docs/learn-es2015/#proxies)
 
 #### Reflect API
+
 * [Reflect APIが実装された - JS.next](http://js-next.hatenablog.com/entry/2015/03/24/190111)
 
 #### ArrayBuffer/ArrayBufferView
 
 * [ArrayBuffer - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+* [[JavaScript] ArrayBufferについて調べてみた - Qiita](http://qiita.com/edo_m18/items/612d2b31498d22d13b7b)
+* [DataView - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 
 ### ES2016
 
