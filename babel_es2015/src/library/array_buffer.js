@@ -3,6 +3,13 @@ export default function arrayBuffer() {
   {
     console.group('ArrayBuffer');
     {
+      console.group('base');
+      {
+        const buffer = new ArrayBuffer(4); // 4 bytes
+        console.log('buffer bytes =>', buffer.byteLength);
+      }
+      console.groupEnd();
+
       console.group('buffer sharing');
       {
         const buffer = new ArrayBuffer(2); // 2 bytes
