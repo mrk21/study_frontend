@@ -17,11 +17,11 @@ export default function arrayBuffer() {
           const view = new Uint8Array(buffer);
           view[0] = 0xFF;
           view[1] = 0xFF;
-          console.log(view);
+          console.log('Uint8: 0xFF 0xFF =>', view);
         }
         {
           const view = new Int16Array(buffer);
-          console.log(view); // -1
+          console.log('Int16: 0xFF 0xFF =>', view); // -1
         }
       }
       console.groupEnd();
