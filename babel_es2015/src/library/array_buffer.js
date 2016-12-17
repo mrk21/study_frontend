@@ -60,9 +60,10 @@ export default function arrayBuffer() {
       {
         const buffer = new ArrayBuffer(2); // 2 bytes
         const view = new DataView(buffer);
+        console.log('set Uint8: 0xFF 0xFF');
         view.setUint8(0, 0xFF);
         view.setUint8(1, 0xFF);
-        console.log(view.getInt16(0));
+        console.log('get Int16 =>', view.getInt16(0));
       }
       console.groupEnd();
 
@@ -70,11 +71,11 @@ export default function arrayBuffer() {
       {
         const buffer = new ArrayBuffer(2); // 2 bytes
         const view = new DataView(buffer);
-        console.log('set 0xFF 0x00');
+        console.log('set Uint8: 0xFF 0x00');
         view.setUint8(0, 0xFF);
         view.setUint8(1, 0x00);
-        console.log('litle endianness =>', view.getInt16(0, false));
-        console.log('big endianness =>', view.getInt16(0, true));
+        console.log('get Int16: litle endianness =>', view.getInt16(0, false));
+        console.log('get Int16: big endianness =>', view.getInt16(0, true));
       }
       console.groupEnd();
     }
