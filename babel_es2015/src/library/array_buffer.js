@@ -44,6 +44,10 @@ export default function arrayBuffer() {
       console.group('range error');
       {
         try {
+          console.log(`
+            const buffer = new ArrayBuffer(7); // 7 bytes
+            const view = new Uint16Array(buffer);
+          `);
           const buffer = new ArrayBuffer(7); // 7 bytes
           const view = new Uint16Array(buffer);
         } catch (e) {
