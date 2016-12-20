@@ -107,6 +107,10 @@ Babel => JS
 * [ES proposal: Template Literal Revision](http://www.2ality.com/2016/09/template-literal-revision.html)
 * [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/)
 
+#### Stage-2: Asynchronous iterator
+
+* [ES proposal: asynchronous iteration](http://www.2ality.com/2016/10/asynchronous-iteration.html)
+
 #### Stage-2: Shared Memory and Atomics
 
 * [ECMAScript Shared Memory and Atomics](https://tc39.github.io/ecmascript_sharedmem/shmem.html)
