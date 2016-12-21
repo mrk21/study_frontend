@@ -1,4 +1,4 @@
-export default function iterators() {
+export default async function iterators() {
   console.group('iterators');
   {
     const iterable = {
@@ -42,7 +42,23 @@ export default function iterators() {
     };
 
     const asyncIterator = iterable[Symbol.iterator]();
-    asyncIterator.next().then(result => console.log(result));
+    await asyncIterator.next()
+      .then(result => {
+        console.log(result);
+        return asyncIterator.next();
+      })
+      .then(result => {
+        console.log(result);
+        return asyncIterator.next();
+      })
+      .then(result => {
+        console.log(result);
+        return asyncIterator.next();
+      })
+      .then(result => {
+        console.log(result);
+        return asyncIterator.next();
+      });
 
     // NOTICE: Compile error
     /*
