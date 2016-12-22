@@ -60,12 +60,10 @@ export default async function iterators() {
         return asyncIterator.next();
       });
 
-    // NOTICE: Compile error
-    /*
+    // @see transform-async-generator-functions
     for await (const value of iterable) {
       console.log(value);
     }
-    */
   }
   console.groupEnd();
 }
