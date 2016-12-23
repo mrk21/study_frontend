@@ -110,6 +110,9 @@ Babel => JS
 #### Stage-2: Asynchronous iterator
 
 * [ES proposal: asynchronous iteration](http://www.2ality.com/2016/10/asynchronous-iteration.html)
+* [babel/packages/babel-runtime at master · babel/babel](https://github.com/babel/babel/tree/master/packages/babel-runtime)
+* [for..await on async iterator fails · Issue #4639 · babel/babel](https://github.com/babel/babel/issues/4639)
+* [babel-plugin-transform-async-generator-functions](https://www.npmjs.com/package/babel-plugin-transform-async-generator-functions)
 
 #### Stage-2: Shared Memory and Atomics
 
