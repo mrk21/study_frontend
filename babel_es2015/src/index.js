@@ -33,6 +33,9 @@ async function exec(func) {
 }
 
 async function main() {
+  // HACK: This is inserted in order to resolve `(0 , _symbol2.default) is not a function` error
+  Symbol('a');
+
   await exec(classSyntax);
   await exec(iterators);
   await exec(generator);

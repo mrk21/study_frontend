@@ -8,7 +8,6 @@
   "plugins": [
     "transform-runtime",
     "transform-decorators-legacy",
-    "transform-async-generator-functions",
     "syntax-function-sent"
   ]
 }
