@@ -1,3 +1,5 @@
+/* eslint max-len: ["error", 120] */
+
 import 'babel-polyfill';
 import classSyntax from './core/class_syntax';
 import iterators from './core/iterators';
@@ -33,7 +35,7 @@ async function exec(func) {
 }
 
 async function main() {
-  // HACK: This is inserted in order to resolve `(0 , _symbol2.default) is not a function` error
+  // HACK: This code is inserted in order to resolve `(0 , _symbol2.default) is not a function` error
   Symbol('a');
 
   await exec(classSyntax);
