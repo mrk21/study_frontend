@@ -126,6 +126,8 @@ export default async function iterators() {
           console.log(value);
         }
       `);
+
+      // MEMO: This file is ignored to eslint in order to resolve the error on `eslint/lib/token-store.js`
       for await (const value of iterable) {
         console.log(value);
       }
