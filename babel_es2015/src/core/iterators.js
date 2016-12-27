@@ -127,11 +127,12 @@ export default async function iterators() {
         }
       `);
 
-      // MEMO: This file is ignored to eslint in order to resolve the error on `eslint/lib/token-store.js`
+      // NOTICE: This file is ignored to eslint in order to resolve the error on `eslint/lib/token-store.js`
       for await (const value of iterable) {
         console.log(value);
       }
     }
+    console.groupEnd();
   }
   console.groupEnd();
 }

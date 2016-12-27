@@ -57,6 +57,7 @@ export default function arrayBuffer() {
           `);
           const buffer = new ArrayBuffer(7); // 7 bytes
           const view = new Uint16Array(buffer);
+          console.log(view);
         } catch (e) {
           console.error(e);
         }
