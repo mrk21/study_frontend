@@ -1,3 +1,6 @@
+// NOTICE: This file is ignored to eslint in order to resolve the error on `eslint/lib/token-store.js`
+// @see https://github.com/eslint/eslint/pull/7417
+
 export default async function iterators() {
   console.group('iterators');
   {
@@ -127,7 +130,6 @@ export default async function iterators() {
         }
       `);
 
-      // NOTICE: This file is ignored to eslint in order to resolve the error on `eslint/lib/token-store.js`
       for await (const value of iterable) {
         console.log(value);
       }
