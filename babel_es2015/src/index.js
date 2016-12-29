@@ -16,6 +16,7 @@ import globalVariable from './core/global'; // ES-next: stage-3
 import functionParameters from './core/function_parameters'; // ES-next: stage-4
 import arrayBuffer from './library/array_buffer';
 import sharedMemoryAndAtomics from './core/shared_memory_and_atomics'; // ES-next stage-2
+import promise from './library/promise';
 import set from './library/set';
 import map from './library/map';
 import weakSet from './library/weak_set';
@@ -53,6 +54,7 @@ async function main() {
   await exec(functionParameters);
   await exec(arrayBuffer);
   await exec(sharedMemoryAndAtomics);
+  await exec(promise);
   await exec(set);
   await exec(map);
   await exec(weakSet);
