@@ -101,6 +101,10 @@ Babel => JS
 * [Rest and Spread properties](https://github.com/hemanth/es-next#rest-and-spread-properties)
 * [Async Functions - Qiita](http://qiita.com/berlysia/items/ce14f023f10100e35d35)
 
+#### Stage-2: Promise.prototype.finally
+
+* [ECMAScript 6 promises (2/2): the API](http://www.2ality.com/2014/10/es6-promises-api.html)
+
 #### Stage-2: Template literal Revision
 
 * [tc39/proposal-template-literal-revision](https://github.com/tc39/proposal-template-literal-revision)
