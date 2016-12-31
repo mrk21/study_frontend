@@ -23,6 +23,7 @@ import weakSet from './library/weak_set';
 import weakMap from './library/weak_map';
 import stringApi from './library/string_api';
 import arrayApi from './library/array_api';
+import functionApi from './library/function_api';
 import numberApi from './library/number_api';
 import asyncFunctions from './core/async_functions';
 
@@ -61,6 +62,7 @@ async function main() {
   await exec(weakMap);
   await exec(stringApi);
   await exec(arrayApi);
+  await exec(functionApi);
   await exec(numberApi);
   await exec(asyncFunctions);
 }

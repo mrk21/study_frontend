@@ -129,6 +129,11 @@ Babel => JS
 * [System.global (ES.next stage1) - Qiita](http://qiita.com/ConquestArrow/items/f303ce0990049c8c9946)
 * [tc39/proposal-global: ECMAScript Proposal, specs, and reference implementation for `global`](https://github.com/tc39/proposal-global)
 
+#### Stage-3: Function.prototype.toString revision
+
+* [ES proposal: Function.prototype.toString revision](http://www.2ality.com/2016/08/function-prototype-tostring.html)
+* [azuさんのツイート: "そういえばついにFunction#toStringの挙動が規定されるっぽですよ "Function-prototype.toString revision" https://t.co/BGYvtuR5h9"](https://twitter.com/azu_re/status/722337687013699585)
+
 ### decorators
 
 * [Babel6でreact-reduxの@connectを実現する。 - Qiita](http://qiita.com/hikaruworld@github/items/ca0a8c091cd199d1f1bb)
