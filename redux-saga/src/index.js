@@ -7,7 +7,6 @@ import createSagaMiddleware from 'redux-saga'
 import Fetch from 'components/fetch';
 import rootSaga from './sagas';
 
-
 const debugToolMiddleware = window.devToolsExtension ? window.devToolsExtension() : f => f;
 const sagaMiddleware = createSagaMiddleware();
 
